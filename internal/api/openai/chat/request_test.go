@@ -211,10 +211,13 @@ func TestDecodeRequestSkipsFieldScan(t *testing.T) {
 		t.Fatal(err)
 	}
 	droppedOn := fmt.Sprint(withScan.Context.Dropped)
-	for _, want := range []string{"field:store", "field:reasoning_effort"} {
+	for _, want := range []string{"field:store"} {
 		if !strings.Contains(droppedOn, want) {
 			t.Fatalf("collectDropped=true dropped = %v, want %s", withScan.Context.Dropped, want)
 		}
+	}
+	if withScan.Context.ReasoningEffort != "high" || withoutScan.Context.ReasoningEffort != "high" {
+		t.Fatalf("reasoning_effort not preserved: with=%q without=%q", withScan.Context.ReasoningEffort, withoutScan.Context.ReasoningEffort)
 	}
 	for _, marker := range withoutScan.Context.Dropped {
 		if strings.HasPrefix(marker, "field:") {

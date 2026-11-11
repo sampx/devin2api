@@ -19,6 +19,10 @@ import (
 type Request struct {
 	// Model 是请求使用的模型标识。
 	Model string `json:"model"`
+	// Reasoning 是 Responses 的请求级推理强度，独立于模型名称。
+	Reasoning *struct {
+		Effort string `json:"effort"`
+	} `json:"reasoning,omitempty"`
 	// Instructions 是独立于 input 的系统提示词。
 	Instructions string `json:"instructions,omitempty"`
 	// Input 是字符串或 Responses input item 数组。
@@ -49,12 +53,13 @@ type Request struct {
 }
 
 // responsesRequestFields 是 DecodeRequest 已消费的顶层字段；其余字段
-// （reasoning/store/service_tier/include 等）上游没有对应物，
+// （store/service_tier/include 等）上游没有对应物，
 // 记入 Dropped 透出而不是静默吞掉。previous_response_id 虽被消费
 // 用于显式拒绝，标记为已读避免空值也落进 dropped。
 var responsesRequestFields = map[string]bool{
 	"model": true, "instructions": true, "input": true, "tools": true,
-	"stream": true, "max_output_tokens": true, "temperature": true,
+	"reasoning": true,
+	"stream":    true, "max_output_tokens": true, "temperature": true,
 	"top_p": true, "user": true, "prompt_cache_key": true,
 	"tool_choice": true, "parallel_tool_calls": true,
 	"previous_response_id": true,
@@ -133,6 +138,9 @@ func DecodeRequest(data []byte, collectDropped bool) (AdaptedRequest, error) {
 	}
 
 	context := llm.RequestMessages{Model: request.Model, SystemPrompt: request.Instructions}
+	if request.Reasoning != nil {
+		context.ReasoningEffort = request.Reasoning.Effort
+	}
 	if collectDropped {
 		context.Dropped = append(context.Dropped, common.UnconsumedFields(data, responsesRequestFields)...)
 	}

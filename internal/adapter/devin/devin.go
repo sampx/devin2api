@@ -746,6 +746,16 @@ func (adapter *Adapter) Stream(ctx context.Context, request llm.RequestMessages)
 	catalogAt := time.Now()
 	adapter.ensureCatalog(ctx)
 	recorder.NoteModelsFetchMS(time.Since(catalogAt).Milliseconds())
+	// 对外的规范化模型名与推理等级只在发送前解析成上游真实 UID；
+	// models 缓存保留原始目录供 router、能力位和重试共同消费。
+	adapter.modelsMu.RLock()
+	model, err := resolveReasoningVariant(model, request.ReasoningEffort, adapter.models)
+	adapter.modelsMu.RUnlock()
+	if err != nil {
+		invalid := connect.NewError(connect.CodeInvalidArgument, err)
+		recorder.WriteError(debuglog.ErrStageRequestBuild, invalid)
+		return nil, invalid
+	}
 	// requestedUID 记下路由判定前的 uid：命中 router 时保温条目要用它
 	// 重建 assignment jwt（绑 cascade_id），否则 ping 重放丢绑定。
 	requestedUID := model
@@ -1571,11 +1581,11 @@ func (a *Adapter) ListModels(ctx context.Context) ([]adapter.ModelInfo, error) {
 	if a.models != nil && time.Now().Before(a.modelsExpiry) {
 		cached := a.models
 		a.modelsMu.RUnlock()
-		return cached, nil
+		return normalizedModelCatalog(cached), nil
 	}
 	a.modelsMu.RUnlock()
 
-	return a.catalogFlights.run(ctx, catalogFlightKey,
+	models, err := a.catalogFlights.run(ctx, catalogFlightKey,
 		func() ([]adapter.ModelInfo, error, bool) {
 			if a.models != nil && time.Now().Before(a.modelsExpiry) {
 				return a.models, nil, true
@@ -1627,6 +1637,10 @@ func (a *Adapter) ListModels(ctx context.Context) ([]adapter.ModelInfo, error) {
 			}
 			return nil, err
 		})
+	if models != nil {
+		return normalizedModelCatalog(models), err
+	}
+	return nil, err
 }
 
 // fetchModelCatalog 执行一次 GetCliModelConfigs 拉取并整形目录（去重、

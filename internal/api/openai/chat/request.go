@@ -13,10 +13,11 @@ import (
 
 // Request 是 OpenAI Chat Completions 请求中本适配器支持的字段集合。
 type Request struct {
-	Model      string          `json:"model"`
-	Messages   []Message       `json:"messages"`
-	Tools      []Tool          `json:"tools,omitempty"`
-	ToolChoice json.RawMessage `json:"tool_choice,omitempty"`
+	Model           string          `json:"model"`
+	ReasoningEffort string          `json:"reasoning_effort,omitempty"`
+	Messages        []Message       `json:"messages"`
+	Tools           []Tool          `json:"tools,omitempty"`
+	ToolChoice      json.RawMessage `json:"tool_choice,omitempty"`
 	// Functions 与 FunctionCall 是 2023-06 前的旧版 function-calling
 	// 形态：functions 与 tools 并存时两边都收，function_call 只在
 	// tool_choice 缺席时兜底为工具选择。
@@ -89,11 +90,12 @@ type StreamOptions struct {
 }
 
 // chatRequestFields 是 DecodeRequest 已消费的顶层字段；其余字段
-// （reasoning_effort/store/service_tier/metadata/response_format 等）
+// （store/service_tier/metadata/response_format 等）
 // 上游没有对应物，记入 Dropped 透出而不是静默吞掉。
 var chatRequestFields = map[string]bool{
 	"model": true, "messages": true, "tools": true, "tool_choice": true,
-	"functions": true, "function_call": true,
+	"reasoning_effort": true,
+	"functions":        true, "function_call": true,
 	"stream": true, "stream_options": true, "max_tokens": true,
 	"max_completion_tokens": true, "temperature": true, "top_p": true,
 	"stop": true, "top_k": true, "seed": true, "user": true,
@@ -131,7 +133,7 @@ func DecodeRequest(data []byte, collectDropped bool) (AdaptedRequest, error) {
 		return AdaptedRequest{}, errors.New("chat request messages are required")
 	}
 
-	context := llm.RequestMessages{Model: request.Model}
+	context := llm.RequestMessages{Model: request.Model, ReasoningEffort: request.ReasoningEffort}
 	if collectDropped {
 		context.Dropped = append(context.Dropped, common.UnconsumedFields(data, chatRequestFields)...)
 	}

@@ -46,6 +46,9 @@ const (
 type RequestMessages struct {
 	// Model 是调用方指定的模型标识；空表示由适配器使用默认配置。
 	Model string
+	// ReasoningEffort 是客户端指定的推理等级；由供应商适配器映射到
+	// 真实模型变体。空串表示调用方未指定。
+	ReasoningEffort string
 	// SystemPrompt 是独立于普通消息历史的系统提示词。
 	SystemPrompt string
 	// Messages 是按时间顺序排列、可跨供应商重放的完整对话历史。

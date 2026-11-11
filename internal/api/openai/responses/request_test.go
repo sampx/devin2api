@@ -72,6 +72,23 @@ func TestDecodeRequestAcceptsStringInput(t *testing.T) {
 	}
 }
 
+// TestDecodeRequestPreservesReasoningEffort 验证 Responses 标准参数会到达适配器。
+func TestDecodeRequestPreservesReasoningEffort(t *testing.T) {
+	data := []byte(`{"model":"claude-opus-v5.5","reasoning":{"effort":"high"},"input":"hi"}`)
+	request, err := DecodeRequest(data, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if request.Context.ReasoningEffort != "high" {
+		t.Fatalf("ReasoningEffort = %q, want high", request.Context.ReasoningEffort)
+	}
+	for _, dropped := range request.Context.Dropped {
+		if dropped == "field:reasoning" {
+			t.Fatal("standard reasoning.effort was marked dropped")
+		}
+	}
+}
+
 // TestDecodeRequestAcceptsImageURLObject 验证 IDE 常见的 image_url 对象形态可解码。
 func TestDecodeRequestAcceptsImageURLObject(t *testing.T) {
 	data := []byte(`{

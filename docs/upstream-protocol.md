@@ -6,9 +6,19 @@
 >
 > 分工：排障流程与客户端接入 → `upstream-debug-playbook.md`；内容策略指纹 → `upstream-policy-fingerprints.md`；前缀缓存 → `upstream-cache.md`；压缩责任 → `upstream-compaction.md`。
 >
+> 2026-11-11 静态协议基线由 Devin.app 3.10.31 更新为 3.12.43：60 个 descriptor、无缺失依赖；差异为新增 703、修改 0、删除 1661。代理使用的 `GetChatMessage` 等主要 RPC 未见破坏性变更。此次只完成静态与本地检查，尚未验证新版真实上游是否接受代理请求。
+>
 > 2026-09-15 全量复测：工具名字符集、call↔result 按位置配对、脏历史容忍度（trailing-assistant/thinking-only/dup-result）、`stopPatterns` 忽略、`disable_parallel_tool_calls` 无效、`sealed.v1` 尾随签名帧、swe-2-max 上下文边界约 219K-262K tok、`CheckUserMessageRateLimit` 恒 -1、`is_custom_tool`+lark grammar 确定性 `unknown`——以上结论全部维持。发生变化的条目在行内注明。
 >
 > 2026-09-24 全量复测（configs/status×4/misc/registry/assign/chat/hist×4/replay×3/edge×25/toolchan/websearch 全绿）：**唯一实质变化是拒绝文案 mask 化**——历史形状类 `invalid_argument`/`unknown` 拒绝（分组 call→result、孤儿 TOOL 结果、未知 source）不再回 `an internal error occurred`，改披 `The third-party model provider is experiencing issues … try later` 瞬时模板（code 不变、6 帧后死/0 帧死的行为不变）；error 分类侧按 code 判不受文案影响。其余变动：`GetEmbeddings` 由 `unavailable` 改 `failed_precondition`（语义同：不对 token 开放）；`GetModelProviders` 13 家（+Meta，wire 值 13 在 vendored 绑定里无名）；目录 209→247 条（新增 gpt-5.6/claude-5.5·4.6/kimi-k2.7/nemotron-3-ultra/deepseek-v4-pro/gemini-3.x/gpt-5.3-codex 等族）。注意 `probe assign`/`chat -resolve` 对非 router uid（如 swe-2-max）报 `invalid_argument` 是**设计内行为**不是协议坏——swe-2-max 从来不是 router，真 router（subagent-default 等）照常签发 JWE。
+
+## 对外模型名称与推理等级
+
+`GET /v1/models` 将 Devin `GetCliModelConfigs` 中末尾带标准推理等级（`none`/`off`/`minimal`/`low`/`medium`/`high`/`xhigh`/`max`）的原始 UID 按基础模型合并、去重后公开。模型名称中的纯数字版本片段转换为 `v` 点分形式，例如 `claude-opus-5-5-high` → `claude-opus-v5.5`、`swe-2-max` → `swe-v2`；不含标准等级后缀的条目不进入公开目录。含独立 `fast` 或 `priority` 词段的变体被过滤，即使最终后缀看似合法也不参与映射。
+
+客户端在 `/v1/responses` 使用 `reasoning.effort`，在 `/v1/chat/completions` 使用 `reasoning_effort`，适配器根据本账号实际模型目录将基础模型映射为真实 UID：`claude-opus-v5.5` + `high` → `claude-opus-5-5-high`。显式指定了未获支持的档位时返回 `invalid_argument`，不自动降低或提高思考等级。未指定等级时按 `medium` → `low` → `minimal` → `off` → `high` → `xhigh` → `max` 顺序选择**该基础模型确实存在**的第一个变体；不凭空合成 `off`。`none` 在对外请求中等价于 `off`，仅当上游提供相应变体时成立。
+
+内部目录继续保留原始 UID 供路由器、能力位、会话续试和保温使用。已有客户端显式传入的原始 UID 继续直通，但被排除的 `fast`/`priority` UID 会被拒绝，避免绕开过滤意图。用户配置的自定义别名仍在内部解析，但只有符合公开目录规则的名称会被展示。本功能使用本地模拟目录验证，尚未代用户向真实 Devin 发起模型调用。
 
 ## 探测工具
 
@@ -22,7 +32,7 @@
 - `bigctx -kb N`：发 ~N KB 单条 user 消息观察错误码，探 prompt 长度上限的边界行为。
 - `websearch -query <q>`：直连 `GetWebSearchResults` 打靶（`-limit`/`-domain`/`-mode`/`-provider`/`-wmodel`）。
 - `toolchan <变体|all> [-n N] [-prompt 文本]`：工具文档通道可读性判别——合成工具字段魔法值只写进单一被测通道（description/schema 字段描述/system 注入段/required/anyOf），`sw-*` 变体用真实 ScheduleWakeup 定义复现事故与修复形态。
-- `registry`：LanguageServerService 的 `GetSystemPromptAndTools`/`GetMcpServerStates`/`GetAllSkills` 按 planner-mode 分档探测——**整族在 server.codeium.com 不 host（两种包名路径全 404）**，工具注册表/system prompt 是客户端编译产物不走线上 RPC，该子命令的价值是阴性结论存档。
+- 旧版 `registry`：曾用 LanguageServerService 的 `GetSystemPromptAndTools`/`GetMcpServerStates`/`GetAllSkills` 分档探测；server.codeium.com 实测所有路径均 404。3.12.43 descriptor 已删除这些 RPC，因此该诊断子命令已移除；历史阴性结论保留。
 
 抓真实 CLI 流量的方法（`credentials.toml` 指本地捕获服务器 + 回放启动 RPC）见 `upstream-debug-playbook.md`「逆向参考」。
 
@@ -233,7 +243,7 @@ GetChatMessage{chat_model_uid=assignment.model_uid, model_assignment_jwt, cascad
 | `GetEmbeddings`                                                                          | `unavailable`——不对该 token 开放（2026-09-24 复测改报 `failed_precondition`，语义同）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `GetStreamingExternalChatCompletions`                                                    | `invalid_argument`——旧版 Windsurf chat 面，走 `model_id` 枚举，关着                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `GetWebSearchResults`                                                                    | 托管搜索实际在用（`websearch.go`）：`allowed_domains` 在上游是单域字面量（多值实测返回 0 条），多域逐域调用按 URL 去重；`blocked_domains` 上游无对应字段，结果侧按 host 后缀过滤；unary 调用同样计速率配额，每次调用过本地闸门                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `LanguageServerService`（`GetSystemPromptAndTools`/`GetMcpServerStates`/`GetAllSkills`） | 整族在 server.codeium.com 不 host（`probe registry` 实测全 404）——工具注册表与 system prompt 是客户端编译产物，不走线上 RPC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `LanguageServerService`（`GetSystemPromptAndTools`/`GetMcpServerStates`/`GetAllSkills`） | 旧版 `probe registry` 实测全 404；3.12.43 descriptor 已移除这些 RPC，诊断子命令同步移除。工具注册表与 system prompt 由客户端提供，不走该线上 RPC |
 
 `ModelFeatures` 能力位透出范围：`/v1/models` 投影 6 个位——`supports_images`/`supports_documents`/`supports_tool_calls`/`supports_parallel_tool_calls`/`supports_thinking`/`preserve_thinking`（`modelCapabilities`，与 adapter `ListModels` 采集集相同）；3.10.31 descriptor 刷新后 `supports_documents`(#29)/`supports_document_urls`(#30)/`supports_video`(#27)/`supports_video_urls`(#28)/`summarize_thinking`(#31) 都进了 vendored proto——documents/video 四位已投影（`/v1/models` + ccpanel upstream 视图），`supports_documents`/`supports_video` 还驱动 adapter 的本地门控（无对应能力模型 + 对应内容 → `invalid_argument`，镜像上游文案）；`interleave_thinking`/summarize 位不投影。glm/kimi/grok/inkling/deepseek/nemotron 全系缺 `supports_parallel_tool_calls`。
 
