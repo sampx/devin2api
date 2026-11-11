@@ -38,9 +38,7 @@ const defaultBaseURL = "https://server.codeium.com"
 var marshal = protojson.MarshalOptions{EmitUnpopulated: false, UseEnumNumbers: false}
 
 // commands 是子命令分派表；usage() 的子命令列表须与它保持一致。
-// 第二个客户端参数是 LanguageServerService（GetSystemPromptAndTools /
-// GetMcpServerStates / GetAllSkills 所在服务），只有 registry 使用。
-var commands = map[string]func(context.Context, devinprotoconnect.ApiServerServiceClient, devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, string, []string) error{
+var commands = map[string]func(context.Context, devinprotoconnect.ApiServerServiceClient, string, []string) error{
 	"configs":    cmdConfigs,
 	"status":     cmdStatus,
 	"assign":     cmdAssign,
@@ -52,7 +50,6 @@ var commands = map[string]func(context.Context, devinprotoconnect.ApiServerServi
 	"misc":       cmdMisc,
 	"edge":       cmdEdge,
 	"websearch":  cmdWebsearch,
-	"registry":   cmdRegistry,
 	"cacheprobe": cmdCacheprobe,
 }
 
@@ -138,11 +135,10 @@ func main() {
 	}
 	httpClient := &http.Client{Transport: upstream.NewBasicAuthTransportFunc(transport, func() string { return token })}
 	client := devinprotoconnect.NewApiServerServiceClient(httpClient, baseURL, connect.WithSendGzip())
-	lsClient := devinprotoconnect.NewExaLanguageServerPb_LanguageServerServiceClient(httpClient, baseURL, connect.WithSendGzip())
 	ctx, cancel := context.WithTimeout(context.Background(), 300*time.Second)
 	defer cancel()
 
-	if err := run(ctx, client, lsClient, token, args[1:]); err != nil {
+	if err := run(ctx, client, token, args[1:]); err != nil {
 		fmt.Fprintln(os.Stderr, "ERR:", err)
 		os.Exit(1)
 	}
@@ -173,9 +169,6 @@ func usage() {
     -model uid                chat_model_uid (default swe-2-max)
     -image-file path          attach a real png instead of the tiny 1x1 blue png
     -prompt text              user prompt text for prompt-driven cases (e.g. user-image-prompt)
-  registry [flags]            GetSystemPromptAndTools + GetMcpServerStates + GetAllSkills
-    -planner-type name        conversational|conversational_v2 (default: both unset and conversational)
-    -skip-mcp-skills          skip GetMcpServerStates/GetAllSkills calls
   cacheprobe [flags]          A→B→C prefix-cache gate: does trajectory_id gate upstream cache?
     -mode proxy|upstream      proxy: drive a devin-2api /v1 endpoint (needs -proxy-url);
                               upstream: direct GetChatMessage with explicit trajectory ids
@@ -364,7 +357,7 @@ func toolCall(id, name, argsJSON string) *devinproto.ExaCodeiumCommonPb_ChatTool
 
 // cmdConfigs dump GetCliModelConfigs：原始 protojson 落盘，终端打印
 // 每模型的 router/family/能力矩阵摘要。
-func cmdConfigs(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, _ []string) error {
+func cmdConfigs(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, _ []string) error {
 	resp, err := client.GetCliModelConfigs(ctx, connect.NewRequest(&devinproto.GetCliModelConfigsRequest{
 		Metadata: metadata(token, true),
 	}))
@@ -406,7 +399,7 @@ func cmdConfigs(ctx context.Context, client devinprotoconnect.ApiServerServiceCl
 
 // cmdStatus 连打四个只读状态 RPC（容量/限流/模型状态/provider），
 // 单端失败不中断后续探测。
-func cmdStatus(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, _ []string) error {
+func cmdStatus(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, _ []string) error {
 	if r, err := client.CheckChatCapacity(ctx, connect.NewRequest(&devinproto.CheckChatCapacityRequest{Metadata: metadata(token, true)})); err != nil {
 		fmt.Println("CheckChatCapacity ERR:", err)
 	} else {
@@ -438,7 +431,7 @@ func cmdStatus(ctx context.Context, client devinprotoconnect.ApiServerServiceCli
 
 // cmdAssign 对每个 router uid 调一次 AssignModel，打印返回的
 // assignment（uid/harness/jwt），单号失败不中断。
-func cmdAssign(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdAssign(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	if len(args) == 0 {
 		return fmt.Errorf("assign needs at least one uid")
 	}
@@ -476,7 +469,7 @@ func (t *toolList) Set(v string) error {
 // 工具声明矩阵（schema/desc/strict/readonly/custom/computer_use）、
 // trajectory/cascade id、completion 配置与 AssignModel 前置均可控，
 // 输出交给 runStream。
-func cmdChat(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdChat(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("chat", flag.ContinueOnError)
 	model := fs.String("model", "swe-2-max", "")
 	userPrompt := fs.String("prompt", "Reply exactly: pong", "")
@@ -1035,7 +1028,7 @@ func runStream(ctx context.Context, client devinprotoconnect.ApiServerServiceCli
 // cmdReplay 两步实验：先发一题引出 thinking，再把捕获的 assistant
 // 回合按 -variant 变形（去签名/伪签名/改 thinking 等）回放进历史，
 // 观察上游对签名-正文一致性的校验边界。
-func cmdReplay(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdReplay(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("replay", flag.ContinueOnError)
 	model := fs.String("model", "swe-2-max", "")
 	variant := fs.String("variant", "with-sig", "")
@@ -1176,7 +1169,7 @@ func cmdReplay(ctx context.Context, client devinprotoconnect.ApiServerServiceCli
 
 // cmdHist 造一段含 thinking+双 tool call 的合成历史，按 -shape 选
 // 合并/拆分形态发上游，验证不同 wire 排布是否都被接受。
-func cmdHist(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdHist(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("hist", flag.ContinueOnError)
 	shape := fs.String("shape", "merged", "")
 	model := fs.String("model", "swe-2-max", "")
@@ -1251,7 +1244,7 @@ func cmdHist(ctx context.Context, client devinprotoconnect.ApiServerServiceClien
 // cmdRerun 回放 03-devin-request.json 抓到的完整上游请求：每次换新的
 // executionId，统计 stopReason / toolCalls / 文本尾部，用于同一段历史在
 // 不同 wire 形态下的 A/B 对照（拆分 vs 合并）。
-func cmdRerun(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdRerun(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("rerun", flag.ContinueOnError)
 	file := fs.String("file", "", "protojson GetChatMessageRequest (logs/*/03-devin-request.json)")
 	dict := fs.String("dict", "", "delta 帧解码字典：同目录 01-http-request.json 的解后明文（writefile() 导出的 03 是 zstd delta 帧时必给；端点 /file/{name} 导出的已解明文不需要）")
@@ -1327,7 +1320,7 @@ func cmdRerun(ctx context.Context, client devinprotoconnect.ApiServerServiceClie
 
 // cmdBigctx 发一条 -kb 指定大小的单用户消息，探测上游请求体/
 // 上下文上限的报错码。
-func cmdBigctx(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdBigctx(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("bigctx", flag.ContinueOnError)
 	kb := fs.Int("kb", 1024, "")
 	model := fs.String("model", "swe-2-max", "")
@@ -1352,7 +1345,7 @@ func cmdBigctx(ctx context.Context, client devinprotoconnect.ApiServerServiceCli
 
 // cmdMisc 探测主链路之外的相邻端点：embeddings、外部 chat 补全流、
 // status/config/command 模型配置。
-func cmdMisc(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, _ []string) error {
+func cmdMisc(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, _ []string) error {
 	emb, err := client.GetEmbeddings(ctx, connect.NewRequest(&devinproto.GetEmbeddingsRequest{
 		Request: &devinproto.ExaCodeiumCommonPb_EmbeddingsRequest{
 			Prompts: []string{"hello world"},
@@ -1450,7 +1443,7 @@ func dumpConnectErr(err error) {
 
 // cmdEdge 按 case 名分派一组定向边界形态（孤儿 tool 结果、截断续传、
 // 非法签名、图片/PDF 通道等），逐个验证上游校验行为。
-func cmdEdge(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, argv []string) error {
+func cmdEdge(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, argv []string) error {
 	fs := flag.NewFlagSet("edge", flag.ContinueOnError)
 	model := fs.String("model", "swe-2-max", "")
 	imageFile := fs.String("image-file", "", "png file to attach instead of tinyPNG")
@@ -1798,7 +1791,7 @@ func trunc(s string, n int) string {
 
 // cmdWebsearch 调 GetWebSearchResults，探测 query/limit/domain/mode
 // 与第三方 provider+model 组合字段。
-func cmdWebsearch(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdWebsearch(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("websearch", flag.ContinueOnError)
 	query := fs.String("query", "", "search query (required)")
 	limit := fs.Uint("limit", 5, "max results")
@@ -1843,114 +1836,5 @@ func cmdWebsearch(ctx context.Context, client devinprotoconnect.ApiServerService
 	}
 	b, _ := marshal.Marshal(resp.Msg)
 	fmt.Println(string(b))
-	return nil
-}
-
-// ---- registry: upstream canonical system prompt + tool registry ----
-
-// cmdRegistry 调 LanguageServerService.GetSystemPromptAndTools（上游下发系统
-// 提示与工具注册表的 RPC），按 planner_mode 全枚举扫描，对比各模式下工具集
-// 与 system prompt 差异；另附 GetMcpServerStates/GetAllSkills 一次性 dump，
-// 原始响应全部落 outputs/probe/。
-func cmdRegistry(ctx context.Context, _ devinprotoconnect.ApiServerServiceClient, ls devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
-	fs := flag.NewFlagSet("registry", flag.ContinueOnError)
-	plannerType := fs.String("planner-type", "conversational", "conversational|conversational_v2")
-	skipExtra := fs.Bool("skip-mcp-skills", false, "")
-	if err := fs.Parse(args); err != nil {
-		return err
-	}
-	_ = os.MkdirAll("outputs/probe", 0o755)
-	type modeCase struct {
-		label string
-		mode  *devinproto.ExaCodeiumCommonPb_ConversationalPlannerMode
-	}
-	cases := []modeCase{{label: "unset"}}
-	for _, m := range []string{"DEFAULT", "READ_ONLY", "NO_TOOL", "EXPLORE", "PLANNING", "AUTO"} {
-		v, err := enumByName[devinproto.ExaCodeiumCommonPb_ConversationalPlannerMode](m, devinproto.ExaCodeiumCommonPb_ConversationalPlannerMode_value)
-		if err != nil {
-			return err
-		}
-		cases = append(cases, modeCase{label: m, mode: &v})
-	}
-	var baseline []string
-	for _, c := range cases {
-		req := &devinproto.ExaLanguageServerPb_GetSystemPromptAndToolsRequest{Metadata: metadata(token, true)}
-		if c.mode != nil {
-			pc := &devinproto.ExaCortexPb_CascadePlannerConfig{}
-			switch *plannerType {
-			case "conversational":
-				pc.PlannerTypeConfig = &devinproto.ExaCortexPb_CascadePlannerConfig_Conversational{
-					Conversational: &devinproto.ExaCortexPb_CascadeConversationalPlannerConfig{PlannerMode: c.mode},
-				}
-			case "conversational_v2":
-				pc.PlannerTypeConfig = &devinproto.ExaCortexPb_CascadePlannerConfig_ConversationalV2{
-					ConversationalV2: &devinproto.ExaCortexPb_CascadeConversationalV2PlannerConfig{PlannerMode: c.mode},
-				}
-			default:
-				return fmt.Errorf("unknown planner-type %q", *plannerType)
-			}
-			req.CascadeConfig = &devinproto.ExaCortexPb_CascadeConfig{PlannerConfig: pc}
-		}
-		resp, err := ls.GetSystemPromptAndTools(ctx, connect.NewRequest(req))
-		if err != nil {
-			fmt.Printf("%-10s ERR %v\n", c.label, err)
-			continue
-		}
-		b, _ := marshal.Marshal(resp.Msg)
-		_ = os.WriteFile(fmt.Sprintf("outputs/probe/registry-%s.json", strings.ToLower(c.label)), b, 0o644)
-		var names []string
-		fieldUse := map[string]int{}
-		for _, td := range resp.Msg.GetToolDefinitions() {
-			names = append(names, td.GetName())
-			if td.GetDescription() != "" {
-				fieldUse["description"]++
-			}
-			if td.GetJsonSchemaString() != "" {
-				fieldUse["schema"]++
-			}
-			if td.GetServerName() != "" {
-				fieldUse["server_name"]++
-			}
-			if td.GetReadOnlyHint() {
-				fieldUse["read_only_hint"]++
-			}
-			if td.GetIsCustomTool() {
-				fieldUse["is_custom_tool"]++
-			}
-			if td.GetStrict() {
-				fieldUse["strict"]++
-			}
-			if td.GetComputerUseConfig() != nil {
-				fieldUse["computer_use"]++
-			}
-			if len(td.GetAttributionFieldNames()) > 0 {
-				fieldUse["attribution"]++
-			}
-		}
-		fmt.Printf("%-10s tools=%d fields=%v syslen=%d\n", c.label, len(names), j(fieldUse), len(resp.Msg.GetSystemPrompt()))
-		if baseline == nil {
-			baseline = names
-			fmt.Println("  tools:", strings.Join(names, ", "))
-		} else if j(names) != j(baseline) {
-			fmt.Printf("  DIFF tools: %s\n", strings.Join(names, ", "))
-		}
-	}
-	if *skipExtra {
-		return nil
-	}
-	if r, err := ls.GetMcpServerStates(ctx, connect.NewRequest(&devinproto.ExaLanguageServerPb_GetMcpServerStatesRequest{})); err != nil {
-		fmt.Println("GetMcpServerStates ERR:", err)
-	} else {
-		b, _ := marshal.Marshal(r.Msg)
-		_ = os.WriteFile("outputs/probe/mcp-server-states.json", b, 0o644)
-		fmt.Println("GetMcpServerStates states:", len(r.Msg.GetStates()), "-> outputs/probe/mcp-server-states.json")
-	}
-	if r, err := ls.GetAllSkills(ctx, connect.NewRequest(&devinproto.ExaLanguageServerPb_GetAllSkillsRequest{})); err != nil {
-		fmt.Println("GetAllSkills ERR:", err)
-	} else {
-		b, _ := marshal.Marshal(r.Msg)
-		_ = os.WriteFile("outputs/probe/all-skills.json", b, 0o644)
-		fmt.Println("GetAllSkills skills:", len(r.Msg.GetSkills()), "-> outputs/probe/all-skills.json")
-	}
 	return nil
 }

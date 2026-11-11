@@ -89,7 +89,7 @@ type gateVerdict struct {
 
 // cmdCacheprobe 跑 A→B→C 缓存门：逐腿发请求、收 usage、算判别比率，
 // 输出 JSON 报告（stdout 恒有，-out 另落盘）。
-func cmdCacheprobe(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, args []string) error {
+func cmdCacheprobe(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, args []string) error {
 	fs := flag.NewFlagSet("cacheprobe", flag.ContinueOnError)
 	mode := fs.String("mode", "proxy", "proxy|upstream：proxy 打 devin-2api /v1/chat/completions，upstream 直连 GetChatMessage")
 	legsFlag := fs.String("legs", "A,R,B,C", "腿序列：A=播种 R=同轨迹重发 B=新轨迹同内容 C=暖轨迹变后缀 D=新轨迹msgB")

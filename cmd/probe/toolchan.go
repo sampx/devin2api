@@ -192,7 +192,7 @@ var toolchanOrder = []string{"none", "desc", "field", "prompt", "prompt-trunc", 
 // cmdToolchan 逐变体发 GetChatMessage：tool_choice 指名 queue_reminder
 // 强制调用，用户消息只给 delay_seconds/label 的动机不提 seal——
 // 从 argumentsJson 里 seal 的存在性与取值判定通道可读性。
-func cmdToolchan(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, _ devinprotoconnect.ExaLanguageServerPb_LanguageServerServiceClient, token string, argv []string) error {
+func cmdToolchan(ctx context.Context, client devinprotoconnect.ApiServerServiceClient, token string, argv []string) error {
 	fs := flag.NewFlagSet("toolchan", flag.ContinueOnError)
 	model := fs.String("model", "swe-2-max", "")
 	reps := fs.Int("n", 1, "repetitions per variant")

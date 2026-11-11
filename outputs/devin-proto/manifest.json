@@ -1,8 +1,8 @@
 {
-  "binary": "/tmp/devin-app/Devin/resources/app/extensions/windsurf/bin/language_server_linux_x64",
+  "binary": "/Applications/Devin.app/Contents/Resources/app/extensions/windsurf/bin/language_server_macos_arm",
   "bundle": "all-protos.proto",
-  "descriptor_count": 62,
-  "candidate_count": 63,
+  "descriptor_count": 60,
+  "candidate_count": 61,
   "duplicate_count": 1,
   "files_with_source_info": 0,
   "files_with_comments": 0,
@@ -321,36 +321,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.api_server_pb.RecordAutoCascadeTelemetryRequest",
-        "flattened": "exa.api_server_pb.RecordAutoCascadeTelemetryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordAutoCascadeTelemetryResponse",
-        "flattened": "exa.api_server_pb.RecordAutoCascadeTelemetryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordWindsurfReviewsTelemetryRequest",
-        "flattened": "exa.api_server_pb.RecordWindsurfReviewsTelemetryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordWindsurfReviewsTelemetryResponse",
-        "flattened": "exa.api_server_pb.RecordWindsurfReviewsTelemetryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordWindsurfReviewEventRequest",
-        "flattened": "exa.api_server_pb.RecordWindsurfReviewEventRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordWindsurfReviewEventResponse",
-        "flattened": "exa.api_server_pb.RecordWindsurfReviewEventResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.api_server_pb.GetDevstralStreamRequest",
         "flattened": "exa.api_server_pb.GetDevstralStreamRequest"
       },
@@ -378,6 +348,46 @@
         "kind": "message",
         "original": "exa.api_server_pb.GetImageCaptionResponse",
         "flattened": "exa.api_server_pb.GetImageCaptionResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.DecisionChoice",
+        "flattened": "exa.api_server_pb.DecisionChoice"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.DecisionLevel",
+        "flattened": "exa.api_server_pb.DecisionLevel"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.DecisionQuestion",
+        "flattened": "exa.api_server_pb.DecisionQuestion"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.GetDecisionsRequest",
+        "flattened": "exa.api_server_pb.GetDecisionsRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.DecisionChoiceProbability",
+        "flattened": "exa.api_server_pb.DecisionChoiceProbability"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.DecisionLevelProbability",
+        "flattened": "exa.api_server_pb.DecisionLevelProbability"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.DecisionAnswer",
+        "flattened": "exa.api_server_pb.DecisionAnswer"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.GetDecisionsResponse",
+        "flattened": "exa.api_server_pb.GetDecisionsResponse"
       },
       {
         "kind": "message",
@@ -493,16 +503,6 @@
         "kind": "message",
         "original": "exa.api_server_pb.RecordMQueryResponse",
         "flattened": "exa.api_server_pb.RecordMQueryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordChatModelNodeRunRequest",
-        "flattened": "exa.api_server_pb.RecordChatModelNodeRunRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.RecordChatModelNodeRunResponse",
-        "flattened": "exa.api_server_pb.RecordChatModelNodeRunResponse"
       },
       {
         "kind": "message",
@@ -673,6 +673,26 @@
         "kind": "message",
         "original": "exa.api_server_pb.GetModelProvidersResponse",
         "flattened": "exa.api_server_pb.GetModelProvidersResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.GetAiGatewayModelPricesRequest",
+        "flattened": "exa.api_server_pb.GetAiGatewayModelPricesRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.AiGatewayTokenPrices",
+        "flattened": "exa.api_server_pb.AiGatewayTokenPrices"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.AiGatewayModelPrice",
+        "flattened": "exa.api_server_pb.AiGatewayModelPrice"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.GetAiGatewayModelPricesResponse",
+        "flattened": "exa.api_server_pb.GetAiGatewayModelPricesResponse"
       },
       {
         "kind": "message",
@@ -1126,6 +1146,11 @@
       },
       {
         "kind": "message",
+        "original": "exa.api_server_pb.PlatformFeePerMillionTokens",
+        "flattened": "exa.api_server_pb.PlatformFeePerMillionTokens"
+      },
+      {
+        "kind": "message",
         "original": "exa.api_server_pb.RecordCascadeUsageResponse",
         "flattened": "exa.api_server_pb.RecordCascadeUsageResponse"
       },
@@ -1406,6 +1431,11 @@
       },
       {
         "kind": "message",
+        "original": "exa.api_server_pb.AllowedModelTagsList",
+        "flattened": "exa.api_server_pb.AllowedModelTagsList"
+      },
+      {
+        "kind": "message",
         "original": "exa.api_server_pb.UpdateTeamOrganizationalControlsExternalRequest",
         "flattened": "exa.api_server_pb.UpdateTeamOrganizationalControlsExternalRequest"
       },
@@ -1466,6 +1496,26 @@
       },
       {
         "kind": "message",
+        "original": "exa.api_server_pb.AddSharedManagedPluginRequest",
+        "flattened": "exa.api_server_pb.AddSharedManagedPluginRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.AddSharedManagedPluginResponse",
+        "flattened": "exa.api_server_pb.AddSharedManagedPluginResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.RemoveSharedManagedPluginRequest",
+        "flattened": "exa.api_server_pb.RemoveSharedManagedPluginRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.RemoveSharedManagedPluginResponse",
+        "flattened": "exa.api_server_pb.RemoveSharedManagedPluginResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.api_server_pb.GetUserManagedPluginsRequest",
         "flattened": "exa.api_server_pb.GetUserManagedPluginsRequest"
       },
@@ -1516,6 +1566,26 @@
       },
       {
         "kind": "message",
+        "original": "exa.api_server_pb.GetManagedPluginsInternalRequest",
+        "flattened": "exa.api_server_pb.GetManagedPluginsInternalRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.GetManagedPluginsInternalResponse",
+        "flattened": "exa.api_server_pb.GetManagedPluginsInternalResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.SetManagedPluginsInternalRequest",
+        "flattened": "exa.api_server_pb.SetManagedPluginsInternalRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.SetManagedPluginsInternalResponse",
+        "flattened": "exa.api_server_pb.SetManagedPluginsInternalResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.api_server_pb.GetAccountManagedPluginBundleRequest",
         "flattened": "exa.api_server_pb.GetAccountManagedPluginBundleRequest"
       },
@@ -1523,126 +1593,6 @@
         "kind": "message",
         "original": "exa.api_server_pb.GetAccountManagedPluginBundleResponse",
         "flattened": "exa.api_server_pb.GetAccountManagedPluginBundleResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAvailableDeployTargetsRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAvailableDeployTargetsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAvailableDeployTargetsResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAvailableDeployTargetsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.ValidateWindsurfJSAppProjectNameRequest",
-        "flattened": "exa.api_server_pb.ValidateWindsurfJSAppProjectNameRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.ValidateWindsurfJSAppProjectNameResponse",
-        "flattened": "exa.api_server_pb.ValidateWindsurfJSAppProjectNameResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.DeployWindsurfJSAppRequest",
-        "flattened": "exa.api_server_pb.DeployWindsurfJSAppRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.DeployWindsurfJSAppResponse",
-        "flattened": "exa.api_server_pb.DeployWindsurfJSAppResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.CreateWindsurfJSAppRequest",
-        "flattened": "exa.api_server_pb.CreateWindsurfJSAppRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.CreateWindsurfJSAppResponse",
-        "flattened": "exa.api_server_pb.CreateWindsurfJSAppResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.DeleteWindsurfJSAppRequest",
-        "flattened": "exa.api_server_pb.DeleteWindsurfJSAppRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.DeleteWindsurfJSAppResponse",
-        "flattened": "exa.api_server_pb.DeleteWindsurfJSAppResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentClaimStatusRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentClaimStatusRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentClaimStatusResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentClaimStatusResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetDeploymentProviderProjectNameByProjectIdRequest",
-        "flattened": "exa.api_server_pb.GetDeploymentProviderProjectNameByProjectIdRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetDeploymentProviderProjectNameByProjectIdResponse",
-        "flattened": "exa.api_server_pb.GetDeploymentProviderProjectNameByProjectIdResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSDeployTargetByProjectIdRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSDeployTargetByProjectIdRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSDeployTargetByProjectIdResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSDeployTargetByProjectIdResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentsByProjectIdRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentsByProjectIdRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentsByProjectIdResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentsByProjectIdResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppsRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppsResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentStatusesByProjectIdRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentStatusesByProjectIdRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentStatusesByProjectIdResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentStatusesByProjectIdResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentRequest",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetWindsurfJSAppDeploymentResponse",
-        "flattened": "exa.api_server_pb.GetWindsurfJSAppDeploymentResponse"
       },
       {
         "kind": "message",
@@ -1708,16 +1658,6 @@
         "kind": "message",
         "original": "exa.api_server_pb.IsConversationSharingBlockedResponse",
         "flattened": "exa.api_server_pb.IsConversationSharingBlockedResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetDefaultWorkflowTemplatesRequest",
-        "flattened": "exa.api_server_pb.GetDefaultWorkflowTemplatesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.api_server_pb.GetDefaultWorkflowTemplatesResponse",
-        "flattened": "exa.api_server_pb.GetDefaultWorkflowTemplatesResponse"
       },
       {
         "kind": "message",
@@ -1935,6 +1875,56 @@
         "flattened": "exa.api_server_pb.GetDecagonAuthTokenResponse"
       },
       {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeToolCallRequest",
+        "flattened": "exa.api_server_pb.JudgeToolCallRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgedToolCall",
+        "flattened": "exa.api_server_pb.JudgedToolCall"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeScope",
+        "flattened": "exa.api_server_pb.JudgeScope"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeEnvironment",
+        "flattened": "exa.api_server_pb.JudgeEnvironment"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeGitState",
+        "flattened": "exa.api_server_pb.JudgeGitState"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeSandbox",
+        "flattened": "exa.api_server_pb.JudgeSandbox"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeProjectRule",
+        "flattened": "exa.api_server_pb.JudgeProjectRule"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgePolicy",
+        "flattened": "exa.api_server_pb.JudgePolicy"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.Judgment",
+        "flattened": "exa.api_server_pb.Judgment"
+      },
+      {
+        "kind": "message",
+        "original": "exa.api_server_pb.JudgeToolCallResponse",
+        "flattened": "exa.api_server_pb.JudgeToolCallResponse"
+      },
+      {
         "kind": "enum",
         "original": "exa.api_server_pb.MQueryScoreStatus",
         "flattened": "exa.api_server_pb.MQueryScoreStatus"
@@ -1948,6 +1938,11 @@
         "kind": "enum",
         "original": "exa.api_server_pb.ChatMessageRequestType",
         "flattened": "exa.api_server_pb.ChatMessageRequestType"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.api_server_pb.DecisionQuestionType",
+        "flattened": "exa.api_server_pb.DecisionQuestionType"
       },
       {
         "kind": "enum",
@@ -1973,6 +1968,16 @@
         "kind": "enum",
         "original": "exa.api_server_pb.ManagedPluginBundleScope",
         "flattened": "exa.api_server_pb.ManagedPluginBundleScope"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.api_server_pb.JudgeScopeKind",
+        "flattened": "exa.api_server_pb.JudgeScopeKind"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.api_server_pb.JudgePermissionMode",
+        "flattened": "exa.api_server_pb.JudgePermissionMode"
       },
       {
         "kind": "service",
@@ -2646,31 +2651,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.browser_preview_pb.SendDOMElementRequest",
-        "flattened": "exa.api_server_pb.ExaBrowserPreviewPb_SendDOMElementRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.browser_preview_pb.SendDOMElementResponse",
-        "flattened": "exa.api_server_pb.ExaBrowserPreviewPb_SendDOMElementResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.browser_preview_pb.SendConsoleOutputRequest",
-        "flattened": "exa.api_server_pb.ExaBrowserPreviewPb_SendConsoleOutputRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.browser_preview_pb.SendConsoleOutputResponse",
-        "flattened": "exa.api_server_pb.ExaBrowserPreviewPb_SendConsoleOutputResponse"
-      },
-      {
-        "kind": "service",
-        "original": "exa.browser_preview_pb.BrowserPreviewService",
-        "flattened": "exa.api_server_pb.ExaBrowserPreviewPb_BrowserPreviewService"
-      },
-      {
-        "kind": "message",
         "original": "exa.bug_checker_pb.Fix",
         "flattened": "exa.api_server_pb.ExaBugCheckerPb_Fix"
       },
@@ -2878,11 +2858,6 @@
         "kind": "message",
         "original": "exa.chat_client_server_pb.SendCascadeInputRequest",
         "flattened": "exa.api_server_pb.ExaChatClientServerPb_SendCascadeInputRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.chat_client_server_pb.ImplementPlanRequest",
-        "flattened": "exa.api_server_pb.ExaChatClientServerPb_ImplementPlanRequest"
       },
       {
         "kind": "message",
@@ -4006,6 +3981,16 @@
       },
       {
         "kind": "message",
+        "original": "exa.codeium_common_pb.PartnerProviderStatus",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_PartnerProviderStatus"
+      },
+      {
+        "kind": "message",
+        "original": "exa.codeium_common_pb.UserPartnerProvider",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_UserPartnerProvider"
+      },
+      {
+        "kind": "message",
         "original": "exa.codeium_common_pb.UserStatus",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_UserStatus"
       },
@@ -4181,8 +4166,23 @@
       },
       {
         "kind": "message",
+        "original": "exa.codeium_common_pb.MetaInferenceConfig",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_MetaInferenceConfig"
+      },
+      {
+        "kind": "message",
+        "original": "exa.codeium_common_pb.QwenInferenceConfig",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_QwenInferenceConfig"
+      },
+      {
+        "kind": "message",
         "original": "exa.codeium_common_pb.InferenceConfig",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_InferenceConfig"
+      },
+      {
+        "kind": "message",
+        "original": "exa.codeium_common_pb.CompactionThresholds",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_CompactionThresholds"
       },
       {
         "kind": "message",
@@ -4301,73 +4301,13 @@
       },
       {
         "kind": "message",
-        "original": "exa.codeium_common_pb.RecipeScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_RecipeScopeItem"
-      },
-      {
-        "kind": "message",
         "original": "exa.codeium_common_pb.CodeMapScopeItem",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_CodeMapScopeItem"
       },
       {
         "kind": "message",
-        "original": "exa.codeium_common_pb.RuleScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_RuleScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.SkillScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_SkillScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.PlanFileScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_PlanFileScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.McpPromptScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_McpPromptScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.McpResourceItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_McpResourceItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.BrowserPageScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_BrowserPageScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.BrowserCodeBlockScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_BrowserCodeBlockScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.BrowserTextScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_BrowserTextScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.ConversationScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ConversationScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.UserActivityScopeItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_UserActivityScopeItem"
-      },
-      {
-        "kind": "message",
         "original": "exa.codeium_common_pb.TerminalScopeItem",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_TerminalScopeItem"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.GithubPullRequestItem",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_GithubPullRequestItem"
       },
       {
         "kind": "message",
@@ -4398,16 +4338,6 @@
         "kind": "message",
         "original": "exa.codeium_common_pb.ContextScope",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScope"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.NodeExecutionRecord",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_NodeExecutionRecord"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.GraphExecutionState",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_GraphExecutionState"
       },
       {
         "kind": "message",
@@ -4518,6 +4448,11 @@
         "kind": "message",
         "original": "exa.codeium_common_pb.LanguageServerDiagnostics",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_LanguageServerDiagnostics"
+      },
+      {
+        "kind": "message",
+        "original": "exa.codeium_common_pb.LanguageServerMemoryDiagnostics",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_LanguageServerMemoryDiagnostics"
       },
       {
         "kind": "message",
@@ -4691,21 +4626,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.codeium_common_pb.WindsurfProject",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_WindsurfProject"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.WindsurfDeployment",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_WindsurfDeployment"
-      },
-      {
-        "kind": "message",
-        "original": "exa.codeium_common_pb.DeployTarget",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeployTarget"
-      },
-      {
-        "kind": "message",
         "original": "exa.codeium_common_pb.WebDocsOption",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_WebDocsOption"
       },
@@ -4716,8 +4636,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.codeium_common_pb.WebAppDeploymentConfig",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_WebAppDeploymentConfig"
+        "original": "exa.codeium_common_pb.OtelExportConfig",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_OtelExportConfig"
       },
       {
         "kind": "message",
@@ -4843,6 +4763,11 @@
         "kind": "message",
         "original": "exa.codeium_common_pb.ResponseDimensionCumulativeMetric",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ResponseDimensionCumulativeMetric"
+      },
+      {
+        "kind": "message",
+        "original": "exa.codeium_common_pb.StreamNotification",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotification"
       },
       {
         "kind": "enum",
@@ -5783,11 +5708,6 @@
         "kind": "enum_value",
         "original": "exa.codeium_common_pb.ExperimentKey.FORCE_NON_OPTIMIZED_DIFF",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ExperimentKey.ExaCodeiumCommonPb_ExperimentKey_FORCE_NON_OPTIMIZED_DIFF"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ExperimentKey.CASCADE_WEB_APP_DEPLOYMENTS_ENABLED",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ExperimentKey.ExaCodeiumCommonPb_ExperimentKey_CASCADE_WEB_APP_DEPLOYMENTS_ENABLED"
       },
       {
         "kind": "enum_value",
@@ -9105,6 +9025,11 @@
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelProvider.ExaCodeiumCommonPb_ModelProvider_MODEL_PROVIDER_THINKING_MACHINES"
       },
       {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.ModelProvider.MODEL_PROVIDER_META",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelProvider.ExaCodeiumCommonPb_ModelProvider_MODEL_PROVIDER_META"
+      },
+      {
         "kind": "enum",
         "original": "exa.codeium_common_pb.BillingStrategy",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_BillingStrategy"
@@ -9165,6 +9090,11 @@
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelPricingType.ExaCodeiumCommonPb_ModelPricingType_MODEL_PRICING_TYPE_ACU_CREDIT"
       },
       {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.ModelPricingType.MODEL_PRICING_TYPE_TOKEN_DOLLARS",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelPricingType.ExaCodeiumCommonPb_ModelPricingType_MODEL_PRICING_TYPE_TOKEN_DOLLARS"
+      },
+      {
         "kind": "enum",
         "original": "exa.codeium_common_pb.ModelCostTier",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelCostTier"
@@ -9218,6 +9148,26 @@
         "kind": "enum_value",
         "original": "exa.codeium_common_pb.ModelDimensionKind.MODEL_DIMENSION_KIND_COST_UNIT",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelDimensionKind.ExaCodeiumCommonPb_ModelDimensionKind_MODEL_DIMENSION_KIND_COST_UNIT"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.ModelDimensionKind.MODEL_DIMENSION_KIND_TEXT",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelDimensionKind.ExaCodeiumCommonPb_ModelDimensionKind_MODEL_DIMENSION_KIND_TEXT"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.codeium_common_pb.ModelDimensionBranding",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelDimensionBranding"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.ModelDimensionBranding.MODEL_DIMENSION_BRANDING_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelDimensionBranding.ExaCodeiumCommonPb_ModelDimensionBranding_MODEL_DIMENSION_BRANDING_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.ModelDimensionBranding.MODEL_DIMENSION_BRANDING_HIGHLIGHT",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelDimensionBranding.ExaCodeiumCommonPb_ModelDimensionBranding_MODEL_DIMENSION_BRANDING_HIGHLIGHT"
       },
       {
         "kind": "enum",
@@ -9333,6 +9283,21 @@
         "kind": "enum_value",
         "original": "exa.codeium_common_pb.GracePeriodStatus.GRACE_PERIOD_STATUS_EXPIRED",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_GracePeriodStatus.ExaCodeiumCommonPb_GracePeriodStatus_GRACE_PERIOD_STATUS_EXPIRED"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.codeium_common_pb.PartnerProvider",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_PartnerProvider"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.PartnerProvider.PARTNER_PROVIDER_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_PartnerProvider.ExaCodeiumCommonPb_PartnerProvider_PARTNER_PROVIDER_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.PartnerProvider.PARTNER_PROVIDER_OPENAI",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_PartnerProvider.ExaCodeiumCommonPb_PartnerProvider_PARTNER_PROVIDER_OPENAI"
       },
       {
         "kind": "enum",
@@ -10250,6 +10215,11 @@
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelType.ExaCodeiumCommonPb_ModelType_MODEL_TYPE_QUERY"
       },
       {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.ModelType.MODEL_TYPE_DECISIONS",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelType.ExaCodeiumCommonPb_ModelType_MODEL_TYPE_DECISIONS"
+      },
+      {
         "kind": "enum",
         "original": "exa.codeium_common_pb.DisplayOption",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DisplayOption"
@@ -10690,6 +10660,121 @@
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_ANTHROPIC_CYBER_VERIFIED"
       },
       {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_ANTHROPIC_EAP_INTERNAL",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_ANTHROPIC_EAP_INTERNAL"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_PENGUIN_AWS_USW2",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_PENGUIN_AWS_USW2"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_PENGUIN_CANADA",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_PENGUIN_CANADA"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_ANTHROPIC_EFS_ZDR_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_ANTHROPIC_EFS_ZDR_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_DATA_RETENTION_WORKSPACE_ANTHROPIC_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_DATA_RETENTION_WORKSPACE_ANTHROPIC_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_OPENAI_STRICT_ZDR_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_OPENAI_STRICT_ZDR_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_OPENAI_SAFETY_RETENTION_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_OPENAI_SAFETY_RETENTION_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_GOOGLE_GENAI_VERTEX_SELECTOR",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_GOOGLE_GENAI_VERTEX_SELECTOR"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_ANTHROPIC_VERTEX_SELECTOR",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_ANTHROPIC_VERTEX_SELECTOR"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_BEDROCK_RUNTIME_FEDERAL",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_BEDROCK_RUNTIME_FEDERAL"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_PENGUIN_CANADA_EVAL",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_PENGUIN_CANADA_EVAL"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_OPENAI_SIWC",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_OPENAI_SIWC"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_COREWEAVE_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_COREWEAVE_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_BASETEN_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_BASETEN_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_OPENAI_DECISIONS",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_OPENAI_DECISIONS"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_OPENAI_DECISIONS_GLOBAL",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_OPENAI_DECISIONS_GLOBAL"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_OPENAI_DECISIONS_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_OPENAI_DECISIONS_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_ANTHROPIC_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_ANTHROPIC_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_ANTHROPIC_GLOBAL",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_ANTHROPIC_GLOBAL"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_META",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_META"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_XAI_US",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_XAI_US"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_XAI_GLOBAL",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_XAI_GLOBAL"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.APIProvider.API_PROVIDER_PENGUIN_FIREWORKS",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_APIProvider.ExaCodeiumCommonPb_APIProvider_API_PROVIDER_PENGUIN_FIREWORKS"
+      },
+      {
         "kind": "enum",
         "original": "exa.codeium_common_pb.ModelStatus",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ModelStatus"
@@ -10826,28 +10911,8 @@
       },
       {
         "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_CODE_CONTEXT",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_CODE_CONTEXT"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_CCI_WITH_SUBRANGE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_CCI_WITH_SUBRANGE"
-      },
-      {
-        "kind": "enum_value",
         "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_REPOSITORY_PATH",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_REPOSITORY_PATH"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_SLACK",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_SLACK"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_GITHUB",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_GITHUB"
       },
       {
         "kind": "enum_value",
@@ -10861,16 +10926,6 @@
       },
       {
         "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_JIRA",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_JIRA"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_GOOGLE_DRIVE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_GOOGLE_DRIVE"
-      },
-      {
-        "kind": "enum_value",
         "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_CONSOLE_LOG",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_CONSOLE_LOG"
       },
@@ -10881,78 +10936,13 @@
       },
       {
         "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_RECIPE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_RECIPE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_KNOWLEDGE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_KNOWLEDGE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_RULE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_RULE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_MCP_RESOURCE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_MCP_RESOURCE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_BROWSER_PAGE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_BROWSER_PAGE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_BROWSER_CODE_BLOCK",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_BROWSER_CODE_BLOCK"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_BROWSER_TEXT",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_BROWSER_TEXT"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_CONVERSATION",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_CONVERSATION"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_USER_ACTIVITY",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_USER_ACTIVITY"
-      },
-      {
-        "kind": "enum_value",
         "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_TERMINAL",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_TERMINAL"
       },
       {
         "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_GITHUB_PULL_REQUEST",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_GITHUB_PULL_REQUEST"
-      },
-      {
-        "kind": "enum_value",
         "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_CODE_MAP",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_CODE_MAP"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_MCP_PROMPT",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_MCP_PROMPT"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_SKILL",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_SKILL"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ContextScopeType.CONTEXT_SCOPE_TYPE_PLAN_FILE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ContextScopeType.ExaCodeiumCommonPb_ContextScopeType_CONTEXT_SCOPE_TYPE_PLAN_FILE"
       },
       {
         "kind": "enum_value",
@@ -12496,101 +12486,6 @@
       },
       {
         "kind": "enum",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_QUEUED",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_QUEUED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_INITIALIZING",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_INITIALIZING"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_BUILDING",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_BUILDING"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_ERROR",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_ERROR"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_READY",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_READY"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentBuildStatus.DEPLOYMENT_BUILD_STATUS_CANCELED",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentBuildStatus.ExaCodeiumCommonPb_DeploymentBuildStatus_DEPLOYMENT_BUILD_STATUS_CANCELED"
-      },
-      {
-        "kind": "enum",
-        "original": "exa.codeium_common_pb.DeploymentProvider",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentProvider"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentProvider.DEPLOYMENT_PROVIDER_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentProvider.ExaCodeiumCommonPb_DeploymentProvider_DEPLOYMENT_PROVIDER_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentProvider.DEPLOYMENT_PROVIDER_VERCEL",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentProvider.ExaCodeiumCommonPb_DeploymentProvider_DEPLOYMENT_PROVIDER_VERCEL"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentProvider.DEPLOYMENT_PROVIDER_NETLIFY",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentProvider.ExaCodeiumCommonPb_DeploymentProvider_DEPLOYMENT_PROVIDER_NETLIFY"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.DeploymentProvider.DEPLOYMENT_PROVIDER_CLOUDFLARE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_DeploymentProvider.ExaCodeiumCommonPb_DeploymentProvider_DEPLOYMENT_PROVIDER_CLOUDFLARE"
-      },
-      {
-        "kind": "enum",
-        "original": "exa.codeium_common_pb.ValidationStatus",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ValidationStatus"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ValidationStatus.VALIDATION_STATUS_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ValidationStatus.ExaCodeiumCommonPb_ValidationStatus_VALIDATION_STATUS_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ValidationStatus.VALIDATION_STATUS_AVAILABLE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ValidationStatus.ExaCodeiumCommonPb_ValidationStatus_VALIDATION_STATUS_AVAILABLE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ValidationStatus.VALIDATION_STATUS_IN_USE",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ValidationStatus.ExaCodeiumCommonPb_ValidationStatus_VALIDATION_STATUS_IN_USE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ValidationStatus.VALIDATION_STATUS_TAKEN",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ValidationStatus.ExaCodeiumCommonPb_ValidationStatus_VALIDATION_STATUS_TAKEN"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.codeium_common_pb.ValidationStatus.VALIDATION_STATUS_INVALID",
-        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ValidationStatus.ExaCodeiumCommonPb_ValidationStatus_VALIDATION_STATUS_INVALID"
-      },
-      {
-        "kind": "enum",
         "original": "exa.codeium_common_pb.SandboxEnforcementMode",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_SandboxEnforcementMode"
       },
@@ -12633,6 +12528,31 @@
         "kind": "enum_value",
         "original": "exa.codeium_common_pb.CascadeAvailability.CASCADE_AVAILABILITY_DISABLED",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_CascadeAvailability.ExaCodeiumCommonPb_CascadeAvailability_CASCADE_AVAILABILITY_DISABLED"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.codeium_common_pb.OtlpProtocol",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_OtlpProtocol"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.OtlpProtocol.OTLP_PROTOCOL_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_OtlpProtocol.ExaCodeiumCommonPb_OtlpProtocol_OTLP_PROTOCOL_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.OtlpProtocol.OTLP_PROTOCOL_HTTP_PROTOBUF",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_OtlpProtocol.ExaCodeiumCommonPb_OtlpProtocol_OTLP_PROTOCOL_HTTP_PROTOBUF"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.OtlpProtocol.OTLP_PROTOCOL_HTTP_JSON",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_OtlpProtocol.ExaCodeiumCommonPb_OtlpProtocol_OTLP_PROTOCOL_HTTP_JSON"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.OtlpProtocol.OTLP_PROTOCOL_GRPC",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_OtlpProtocol.ExaCodeiumCommonPb_OtlpProtocol_OTLP_PROTOCOL_GRPC"
       },
       {
         "kind": "enum",
@@ -12853,6 +12773,41 @@
         "kind": "enum_value",
         "original": "exa.codeium_common_pb.ThirdPartyWebSearchModel.THIRD_PARTY_WEB_SEARCH_MODEL_O4_MINI",
         "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_ThirdPartyWebSearchModel.ExaCodeiumCommonPb_ThirdPartyWebSearchModel_THIRD_PARTY_WEB_SEARCH_MODEL_O4_MINI"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.codeium_common_pb.StreamNotificationCategory",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationCategory"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.StreamNotificationCategory.STREAM_NOTIFICATION_CATEGORY_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationCategory.ExaCodeiumCommonPb_StreamNotificationCategory_STREAM_NOTIFICATION_CATEGORY_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.StreamNotificationCategory.STREAM_NOTIFICATION_CATEGORY_BILLING",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationCategory.ExaCodeiumCommonPb_StreamNotificationCategory_STREAM_NOTIFICATION_CATEGORY_BILLING"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.codeium_common_pb.StreamNotificationSeverity",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationSeverity"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.StreamNotificationSeverity.STREAM_NOTIFICATION_SEVERITY_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationSeverity.ExaCodeiumCommonPb_StreamNotificationSeverity_STREAM_NOTIFICATION_SEVERITY_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.StreamNotificationSeverity.STREAM_NOTIFICATION_SEVERITY_INFO",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationSeverity.ExaCodeiumCommonPb_StreamNotificationSeverity_STREAM_NOTIFICATION_SEVERITY_INFO"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.codeium_common_pb.StreamNotificationSeverity.STREAM_NOTIFICATION_SEVERITY_WARNING",
+        "flattened": "exa.api_server_pb.ExaCodeiumCommonPb_StreamNotificationSeverity.ExaCodeiumCommonPb_StreamNotificationSeverity_STREAM_NOTIFICATION_SEVERITY_WARNING"
       },
       {
         "kind": "message",
@@ -13091,11 +13046,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.cortex_pb.WorkflowSpec",
-        "flattened": "exa.api_server_pb.ExaCortexPb_WorkflowSpec"
-      },
-      {
-        "kind": "message",
         "original": "exa.cortex_pb.CortexPlanSummaryComponent",
         "flattened": "exa.api_server_pb.ExaCortexPb_CortexPlanSummaryComponent"
       },
@@ -13133,11 +13083,6 @@
         "kind": "message",
         "original": "exa.cortex_pb.CortexWorkflowState",
         "flattened": "exa.api_server_pb.ExaCortexPb_CortexWorkflowState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.cortex_pb.CortexRunState",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexRunState"
       },
       {
         "kind": "message",
@@ -13596,11 +13541,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.cortex_pb.DeployWebAppToolConfig",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppToolConfig"
-      },
-      {
-        "kind": "message",
         "original": "exa.cortex_pb.TrajectorySearchToolConfig",
         "flattened": "exa.api_server_pb.ExaCortexPb_TrajectorySearchToolConfig"
       },
@@ -13711,16 +13651,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.cortex_pb.DeploymentInteractionPayload",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeploymentInteractionPayload"
-      },
-      {
-        "kind": "message",
-        "original": "exa.cortex_pb.CascadeDeployInteraction",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CascadeDeployInteraction"
-      },
-      {
-        "kind": "message",
         "original": "exa.cortex_pb.CascadeRunCommandInteraction",
         "flattened": "exa.api_server_pb.ExaCortexPb_CascadeRunCommandInteraction"
       },
@@ -13748,11 +13678,6 @@
         "kind": "message",
         "original": "exa.cortex_pb.CascadeAskUserQuestionInteraction",
         "flattened": "exa.api_server_pb.ExaCortexPb_CascadeAskUserQuestionInteraction"
-      },
-      {
-        "kind": "message",
-        "original": "exa.cortex_pb.CascadeDeployInteractionSpec",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CascadeDeployInteractionSpec"
       },
       {
         "kind": "message",
@@ -14151,21 +14076,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.cortex_pb.CortexStepReadDeploymentConfig",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepReadDeploymentConfig"
-      },
-      {
-        "kind": "message",
-        "original": "exa.cortex_pb.CortexStepDeployWebApp",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepDeployWebApp"
-      },
-      {
-        "kind": "message",
-        "original": "exa.cortex_pb.CortexStepCheckDeployStatus",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepCheckDeployStatus"
-      },
-      {
-        "kind": "message",
         "original": "exa.cortex_pb.CortexStepClipboard",
         "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepClipboard"
       },
@@ -14228,11 +14138,6 @@
         "kind": "message",
         "original": "exa.cortex_pb.CascadeState",
         "flattened": "exa.api_server_pb.ExaCortexPb_CascadeState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.cortex_pb.CascadePanelState",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CascadePanelState"
       },
       {
         "kind": "message",
@@ -15506,28 +15411,13 @@
       },
       {
         "kind": "enum_value",
-        "original": "exa.cortex_pb.CortexStepType.CORTEX_STEP_TYPE_DEPLOY_WEB_APP",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepType.ExaCortexPb_CortexStepType_CORTEX_STEP_TYPE_DEPLOY_WEB_APP"
-      },
-      {
-        "kind": "enum_value",
         "original": "exa.cortex_pb.CortexStepType.CORTEX_STEP_TYPE_CLIPBOARD",
         "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepType.ExaCortexPb_CortexStepType_CORTEX_STEP_TYPE_CLIPBOARD"
       },
       {
         "kind": "enum_value",
-        "original": "exa.cortex_pb.CortexStepType.CORTEX_STEP_TYPE_READ_DEPLOYMENT_CONFIG",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepType.ExaCortexPb_CortexStepType_CORTEX_STEP_TYPE_READ_DEPLOYMENT_CONFIG"
-      },
-      {
-        "kind": "enum_value",
         "original": "exa.cortex_pb.CortexStepType.CORTEX_STEP_TYPE_VIEW_FILE_OUTLINE",
         "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepType.ExaCortexPb_CortexStepType_CORTEX_STEP_TYPE_VIEW_FILE_OUTLINE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.cortex_pb.CortexStepType.CORTEX_STEP_TYPE_CHECK_DEPLOY_STATUS",
-        "flattened": "exa.api_server_pb.ExaCortexPb_CortexStepType.ExaCortexPb_CortexStepType_CORTEX_STEP_TYPE_CHECK_DEPLOY_STATUS"
       },
       {
         "kind": "enum_value",
@@ -15898,36 +15788,6 @@
         "kind": "enum_value",
         "original": "exa.cortex_pb.AutoRunDecision.AUTO_RUN_DECISION_USER_SKIP",
         "flattened": "exa.api_server_pb.ExaCortexPb_AutoRunDecision.ExaCortexPb_AutoRunDecision_AUTO_RUN_DECISION_USER_SKIP"
-      },
-      {
-        "kind": "enum",
-        "original": "exa.cortex_pb.DeployWebAppFileUploadStatus",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppFileUploadStatus"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.cortex_pb.DeployWebAppFileUploadStatus.DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppFileUploadStatus.ExaCortexPb_DeployWebAppFileUploadStatus_DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.cortex_pb.DeployWebAppFileUploadStatus.DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_PENDING",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppFileUploadStatus.ExaCortexPb_DeployWebAppFileUploadStatus_DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_PENDING"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.cortex_pb.DeployWebAppFileUploadStatus.DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_IN_PROGRESS",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppFileUploadStatus.ExaCortexPb_DeployWebAppFileUploadStatus_DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_IN_PROGRESS"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.cortex_pb.DeployWebAppFileUploadStatus.DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_SUCCESS",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppFileUploadStatus.ExaCortexPb_DeployWebAppFileUploadStatus_DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_SUCCESS"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.cortex_pb.DeployWebAppFileUploadStatus.DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_FAILURE",
-        "flattened": "exa.api_server_pb.ExaCortexPb_DeployWebAppFileUploadStatus.ExaCortexPb_DeployWebAppFileUploadStatus_DEPLOY_WEB_APP_FILE_UPLOAD_STATUS_FAILURE"
       },
       {
         "kind": "enum",
@@ -17821,36 +17681,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.extension_server_pb.StartAudioRecordingRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_StartAudioRecordingRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.EndAudioRecordingRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_EndAudioRecordingRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.EndAudioRecordingResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_EndAudioRecordingResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.StartAudioRecordingResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_StartAudioRecordingResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetCurrentAudioRecordingRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetCurrentAudioRecordingRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetCurrentAudioRecordingResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetCurrentAudioRecordingResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.extension_server_pb.LanguageServerStartedRequest",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_LanguageServerStartedRequest"
       },
@@ -17861,23 +17691,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.extension_server_pb.OpenSettingRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenSettingRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenSettingResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenSettingResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.extension_server_pb.OpenFilePointerRequest",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenFilePointerRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenFilePointerResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenFilePointerResponse"
       },
       {
         "kind": "message",
@@ -17906,76 +17721,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.extension_server_pb.CheckTerminalShellSupportRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_CheckTerminalShellSupportRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.CheckTerminalShellSupportResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_CheckTerminalShellSupportResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ExecuteCommandRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ExecuteCommandRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ShowTerminalRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ShowTerminalRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ShowTerminalResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ShowTerminalResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenVirtualFileRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenVirtualFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenVirtualFileResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenVirtualFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SaveDocumentRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SaveDocumentRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SaveDocumentResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SaveDocumentResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ReadTerminalRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ReadTerminalRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ReadTerminalResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ReadTerminalResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenTerminalRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenTerminalRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenTerminalResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenTerminalResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetLintErrorsRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetLintErrorsRequest"
-      },
-      {
-        "kind": "message",
         "original": "exa.extension_server_pb.GetLintErrorsResponse",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetLintErrorsResponse"
       },
@@ -17983,41 +17728,6 @@
         "kind": "message",
         "original": "exa.extension_server_pb.WatchForLintsRequest",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_WatchForLintsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.WatchForLintsResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_WatchForLintsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetLintsForAcknowledgerRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetLintsForAcknowledgerRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetLintsForAcknowledgerResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetLintsForAcknowledgerResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenDiffZonesRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenDiffZonesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenDiffZonesResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenDiffZonesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenMultiDiffRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenMultiDiffRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenMultiDiffResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenMultiDiffResponse"
       },
       {
         "kind": "message",
@@ -18041,71 +17751,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.extension_server_pb.OpenWindsurfRulesFileRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenWindsurfRulesFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenWindsurfRulesFileResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenWindsurfRulesFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.DeleteWindsurfRulesFileRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_DeleteWindsurfRulesFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.DeleteWindsurfRulesFileResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_DeleteWindsurfRulesFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenConfigurePluginsPageRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenConfigurePluginsPageRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenConfigurePluginsPageResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenConfigurePluginsPageResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.NotebookCellEdit",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_NotebookCellEdit"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.WriteCascadeEditRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_WriteCascadeEditRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.WriteCascadeEditResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_WriteCascadeEditResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenConversationWorkspaceQuickPickRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenConversationWorkspaceQuickPickRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.OpenConversationWorkspaceQuickPickResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_OpenConversationWorkspaceQuickPickResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.FindAllReferencesRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_FindAllReferencesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.FindAllReferencesResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_FindAllReferencesResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.extension_server_pb.GetLSPCompletionItemsRequest",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetLSPCompletionItemsRequest"
       },
@@ -18116,73 +17761,13 @@
       },
       {
         "kind": "message",
-        "original": "exa.extension_server_pb.UpdateCascadeTrajectorySummariesRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_UpdateCascadeTrajectorySummariesRequest"
+        "original": "exa.extension_server_pb.GetGitMentionItemsRequest",
+        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetGitMentionItemsRequest"
       },
       {
         "kind": "message",
-        "original": "exa.extension_server_pb.UpdateCascadeTrajectorySummariesResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_UpdateCascadeTrajectorySummariesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.LoadCodeMapRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_LoadCodeMapRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.LoadCodeMapResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_LoadCodeMapResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetSecretValueRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetSecretValueRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetSecretValueResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetSecretValueResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.StoreSecretValueRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_StoreSecretValueRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.StoreSecretValueResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_StoreSecretValueResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetRedirectUriRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetRedirectUriRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.GetRedirectUriResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetRedirectUriResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SearchQueryRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SearchQueryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SearchQueryResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SearchQueryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.UnmountChangesRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_UnmountChangesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.UnmountChangesResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_UnmountChangesResponse"
+        "original": "exa.extension_server_pb.GetGitMentionItemsResponse",
+        "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetGitMentionItemsResponse"
       },
       {
         "kind": "message",
@@ -18193,26 +17778,6 @@
         "kind": "message",
         "original": "exa.extension_server_pb.LogoutWindsurfResponse",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_LogoutWindsurfResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.DeleteWindsurfWorkflowRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_DeleteWindsurfWorkflowRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.DeleteWindsurfWorkflowResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_DeleteWindsurfWorkflowResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.NotifyMcpStateChangedRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_NotifyMcpStateChangedRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.NotifyMcpStateChangedResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_NotifyMcpStateChangedResponse"
       },
       {
         "kind": "message",
@@ -18260,36 +17825,6 @@
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_GetNativeValuesResponse"
       },
       {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SetNativeValueRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SetNativeValueRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SetNativeValueResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SetNativeValueResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ClearNativeValueRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ClearNativeValueRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.ClearNativeValueResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_ClearNativeValueResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SubscribeNativeValuesRequest",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SubscribeNativeValuesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.extension_server_pb.SubscribeNativeValuesResponse",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SubscribeNativeValuesResponse"
-      },
-      {
         "kind": "enum",
         "original": "exa.extension_server_pb.ActiveEditorType",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_ActiveEditorType"
@@ -18308,21 +17843,6 @@
         "kind": "enum_value",
         "original": "exa.extension_server_pb.ActiveEditorType.ACTIVE_EDITOR_TYPE_TERMINAL",
         "flattened": "exa.api_server_pb.ExaExtensionServerPb_ActiveEditorType.ExaExtensionServerPb_ActiveEditorType_ACTIVE_EDITOR_TYPE_TERMINAL"
-      },
-      {
-        "kind": "enum",
-        "original": "exa.extension_server_pb.SoundType",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SoundType"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.extension_server_pb.SoundType.SOUND_TYPE_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SoundType.ExaExtensionServerPb_SoundType_SOUND_TYPE_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.extension_server_pb.SoundType.SOUND_TYPE_CASCADE_DONE",
-        "flattened": "exa.api_server_pb.ExaExtensionServerPb_SoundType.ExaExtensionServerPb_SoundType_SOUND_TYPE_CASCADE_DONE"
       },
       {
         "kind": "enum",
@@ -19001,26 +18521,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetGithubPullRequestSearchInfoRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetGithubPullRequestSearchInfoRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetGithubPullRequestSearchInfoResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetGithubPullRequestSearchInfoResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateAutoCascadeGithubCredentialsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateAutoCascadeGithubCredentialsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateAutoCascadeGithubCredentialsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateAutoCascadeGithubCredentialsResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.HandleStreamingCommandRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_HandleStreamingCommandRequest"
       },
@@ -19056,13 +18556,13 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.UploadRecentCommandsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UploadRecentCommandsRequest"
+        "original": "exa.language_server_pb.StreamTabSuggestionsRequest",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StreamTabSuggestionsRequest"
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.UploadRecentCommandsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UploadRecentCommandsResponse"
+        "original": "exa.language_server_pb.StreamTabSuggestionsResponse",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StreamTabSuggestionsResponse"
       },
       {
         "kind": "message",
@@ -19121,28 +18621,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeModelConfigsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeModelConfigsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeModelConfigsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeModelConfigsResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.TeamOrganizationalControls",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_TeamOrganizationalControls"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetTeamOrganizationalControlsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetTeamOrganizationalControlsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetTeamOrganizationalControlsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetTeamOrganizationalControlsResponse"
       },
       {
         "kind": "message",
@@ -19156,36 +18636,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetProcessesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetProcessesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetExternalModelResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetExternalModelResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetExternalModelRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetExternalModelRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetProcessesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetProcessesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordEventRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordEventRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordEventResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordEventResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.RecordSystemMetricsRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordSystemMetricsRequest"
       },
@@ -19196,26 +18646,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.CancelRequestRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelRequestRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelRequestResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelRequestResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.EditConfigurationRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditConfigurationRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.EditConfigurationResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditConfigurationResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.GetTranscriptionRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetTranscriptionRequest"
       },
@@ -19223,26 +18653,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.GetTranscriptionResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetTranscriptionResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ValidateWindsurfJSAppProjectNameRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ValidateWindsurfJSAppProjectNameRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ValidateWindsurfJSAppProjectNameResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ValidateWindsurfJSAppProjectNameResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SaveWindsurfJSAppProjectNameRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SaveWindsurfJSAppProjectNameRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SaveWindsurfJSAppProjectNameResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SaveWindsurfJSAppProjectNameResponse"
       },
       {
         "kind": "message",
@@ -19263,46 +18673,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.MigrateApiKeyResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_MigrateApiKeyResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.WellSupportedLanguagesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_WellSupportedLanguagesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.WellSupportedLanguagesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_WellSupportedLanguagesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ProgressBarsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ProgressBarsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ProgressBarsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ProgressBarsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordSearchDocOpenRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordSearchDocOpenRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordSearchDocOpenResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordSearchDocOpenResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordSearchResultsViewRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordSearchResultsViewRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordSearchResultsViewResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordSearchResultsViewResponse"
       },
       {
         "kind": "message",
@@ -19336,21 +18706,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetMatchingIndexedReposRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMatchingIndexedReposRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMatchingIndexedReposResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMatchingIndexedReposResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetChatMessageResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetChatMessageResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.RawGetChatMessageResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_RawGetChatMessageResponse"
       },
@@ -19358,56 +18713,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.GetDeepWikiResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetDeepWikiResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CheckUserMessageRateLimitRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CheckUserMessageRateLimitRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CheckUserMessageRateLimitResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CheckUserMessageRateLimitResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMessageTokenCountRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMessageTokenCountRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMessageTokenCountResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMessageTokenCountResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordChatFeedbackRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordChatFeedbackRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordChatFeedbackResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordChatFeedbackResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordChatPanelSessionRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordChatPanelSessionRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordChatPanelSessionResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordChatPanelSessionResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CheckChatCapacityRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CheckChatCapacityRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CheckChatCapacityResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CheckChatCapacityResponse"
       },
       {
         "kind": "message",
@@ -19431,6 +18736,26 @@
       },
       {
         "kind": "message",
+        "original": "exa.language_server_pb.EnablePartnerProviderRequest",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EnablePartnerProviderRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.language_server_pb.EnablePartnerProviderResponse",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EnablePartnerProviderResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.language_server_pb.DisablePartnerProviderRequest",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DisablePartnerProviderRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.language_server_pb.DisablePartnerProviderResponse",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DisablePartnerProviderResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.language_server_pb.GetPrimaryApiKeyForDevsOnlyRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetPrimaryApiKeyForDevsOnlyRequest"
       },
@@ -19448,46 +18773,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.GetProfileDataResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetProfileDataResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CaptureCodeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureCodeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CaptureCodeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureCodeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CaptureFileRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CaptureFileResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetChangelogRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetChangelogRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetChangelogResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetChangelogResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetClassInfosRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetClassInfosRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetClassInfosResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetClassInfosResponse"
       },
       {
         "kind": "message",
@@ -19571,58 +18856,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.AddTrackedWorkspaceRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_AddTrackedWorkspaceRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.AddTrackedWorkspaceResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_AddTrackedWorkspaceResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RemoveTrackedWorkspaceRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RemoveTrackedWorkspaceRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RemoveTrackedWorkspaceResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RemoveTrackedWorkspaceResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetWorkspaceEditStateRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetWorkspaceEditStateRequest"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.WorkspaceEditState",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_WorkspaceEditState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetWorkspaceEditStateResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetWorkspaceEditStateResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.BranchInfo",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_BranchInfo"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RepoInfo",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RepoInfo"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetRepoInfosRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetRepoInfosRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetRepoInfosResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetRepoInfosResponse"
       },
       {
         "kind": "message",
@@ -19666,36 +18901,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetUserSettingsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserSettingsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserSettingsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserSettingsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetUserSettingsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetUserSettingsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetUserSettingsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetUserSettingsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetDefaultWebOriginsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetDefaultWebOriginsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetDefaultWebOriginsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetDefaultWebOriginsResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.GetDebugDiagnosticsRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetDebugDiagnosticsRequest"
       },
@@ -19706,6 +18911,26 @@
       },
       {
         "kind": "message",
+        "original": "exa.language_server_pb.CaptureMemoryProfileRequest",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureMemoryProfileRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.language_server_pb.CaptureMemoryProfileResponse",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureMemoryProfileResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.language_server_pb.CaptureCpuProfileRequest",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureCpuProfileRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.language_server_pb.CaptureCpuProfileResponse",
+        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CaptureCpuProfileResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.language_server_pb.CodeRange",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_CodeRange"
       },
@@ -19713,26 +18938,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.CodeTrackerState",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_CodeTrackerState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetSuggestedContextScopeItemsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetSuggestedContextScopeItemsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetSuggestedContextScopeItemsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetSuggestedContextScopeItemsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMatchingContextScopeItemsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMatchingContextScopeItemsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMatchingContextScopeItemsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMatchingContextScopeItemsResponse"
       },
       {
         "kind": "message",
@@ -19756,46 +18961,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetBrainStatusRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetBrainStatusRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetBrainStatusResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetBrainStatusResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetPinnedGuidelineRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetPinnedGuidelineRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetPinnedContextRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetPinnedContextRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetPinnedGuidelineResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetPinnedGuidelineResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetPinnedContextResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetPinnedContextResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetupUniversitySandboxRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetupUniversitySandboxRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetupUniversitySandboxResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetupUniversitySandboxResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.UnifiedDiffChange",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_UnifiedDiffChange"
       },
@@ -19808,306 +18973,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.CodeTheme",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_CodeTheme"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.OnboardingItemState",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_OnboardingItemState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.OnboardingState",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_OnboardingState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ResetOnboardingRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResetOnboardingRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ResetOnboardingResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResetOnboardingResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SkipOnboardingRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SkipOnboardingRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SkipOnboardingResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SkipOnboardingResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserTrajectoryDebugRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserTrajectoryDebugRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserTrajectoryDebugResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserTrajectoryDebugResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserTrajectoryDescriptionsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserTrajectoryDescriptionsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserTrajectoryDescriptionsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserTrajectoryDescriptionsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ForceBackgroundResearchRefreshRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ForceBackgroundResearchRefreshRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ForceBackgroundResearchRefreshResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ForceBackgroundResearchRefreshResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ReplayGroundTruthTrajectoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ReplayGroundTruthTrajectoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ReplayGroundTruthTrajectoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ReplayGroundTruthTrajectoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.InitializeCascadePanelStateRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_InitializeCascadePanelStateRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.InitializeCascadePanelStateResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_InitializeCascadePanelStateResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdatePanelStateWithUserStatusRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdatePanelStateWithUserStatusRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdatePanelStateWithUserStatusResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdatePanelStateWithUserStatusResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateWorkspaceTrustRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateWorkspaceTrustRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateWorkspaceTrustResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateWorkspaceTrustResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GenerateCodeMapRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GenerateCodeMapRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GenerateCodeMapResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GenerateCodeMapResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.BranchCascadeAndGenerateCodeMapRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_BranchCascadeAndGenerateCodeMapRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.BranchCascadeAndGenerateCodeMapResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_BranchCascadeAndGenerateCodeMapResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.StartCascadeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StartCascadeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.StartCascadeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StartCascadeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTrajectoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTrajectoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTrajectoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTrajectoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserTrajectoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserTrajectoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserTrajectoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserTrajectoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTrajectoryStepsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTrajectoryStepsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTrajectoryStepsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTrajectoryStepsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTrajectoryGeneratorMetadataRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTrajectoryGeneratorMetadataRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTrajectoryGeneratorMetadataResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTrajectoryGeneratorMetadataResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTranscriptForTrajectoryIdRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTranscriptForTrajectoryIdRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeTranscriptForTrajectoryIdResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeTranscriptForTrajectoryIdResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllCascadeTrajectoriesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllCascadeTrajectoriesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllCascadeTrajectoriesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllCascadeTrajectoriesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelCascadeInvocationRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelCascadeInvocationRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelCascadeInvocationResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelCascadeInvocationResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelCascadeInvocationAndWaitRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelCascadeInvocationAndWaitRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelCascadeInvocationAndWaitResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelCascadeInvocationAndWaitResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelCascadeStepsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelCascadeStepsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CancelCascadeStepsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CancelCascadeStepsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SendUserCascadeMessageRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SendUserCascadeMessageRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SendUserCascadeMessageResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SendUserCascadeMessageResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.StartMemoryMigrationCascadeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StartMemoryMigrationCascadeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.StartMemoryMigrationCascadeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StartMemoryMigrationCascadeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.BranchCascadeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_BranchCascadeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.BranchCascadeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_BranchCascadeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.QueueCascadeMessageRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_QueueCascadeMessageRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.QueueCascadeMessageResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_QueueCascadeMessageResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.InterruptWithQueuedMessageRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_InterruptWithQueuedMessageRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.InterruptWithQueuedMessageResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_InterruptWithQueuedMessageResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RemoveFromQueueRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RemoveFromQueueRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RemoveFromQueueResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RemoveFromQueueResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.MoveQueuedMessageRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_MoveQueuedMessageRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.MoveQueuedMessageResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_MoveQueuedMessageResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RevertToCascadeStepRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RevertToCascadeStepRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RevertToCascadeStepResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RevertToCascadeStepResponse"
       },
       {
         "kind": "message",
@@ -20126,163 +18991,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.RecordUserStepSnapshotRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordUserStepSnapshotRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordUserStepSnapshotResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordUserStepSnapshotResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.HandleCascadeUserInteractionRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_HandleCascadeUserInteractionRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.HandleCascadeUserInteractionResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_HandleCascadeUserInteractionResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.AcknowledgeCascadeCodeEditRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_AcknowledgeCascadeCodeEditRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.AcknowledgeCascadeCodeEditResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_AcknowledgeCascadeCodeEditResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeValidationStatesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeValidationStatesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeValidationStatesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeValidationStatesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ResolveWorktreeChangesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveWorktreeChangesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ResolveWorktreeChangesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveWorktreeChangesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.MergeWorktreeChangesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_MergeWorktreeChangesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.MergeWorktreeChangesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_MergeWorktreeChangesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UndoWorktreeMergeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UndoWorktreeMergeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UndoWorktreeMergeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UndoWorktreeMergeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CreateWorktreeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CreateWorktreeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.WorktreeInfo",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_WorktreeInfo"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CreateWorktreeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CreateWorktreeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ListWorktreesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ListWorktreesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ListWorktreesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ListWorktreesResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.ValidationState",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_ValidationState"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.DeleteCascadeTrajectoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DeleteCascadeTrajectoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.DeleteCascadeTrajectoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DeleteCascadeTrajectoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RenameCascadeTrajectoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RenameCascadeTrajectoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RenameCascadeTrajectoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RenameCascadeTrajectoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ArchiveCascadeTrajectoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ArchiveCascadeTrajectoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ArchiveCascadeTrajectoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ArchiveCascadeTrajectoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ResolveOutstandingStepsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveOutstandingStepsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ResolveOutstandingStepsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveOutstandingStepsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.MountCascadeFilesystemRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_MountCascadeFilesystemRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.MountCascadeFilesystemResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_MountCascadeFilesystemResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UnmountCascadeFilesystemRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UnmountCascadeFilesystemRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UnmountCascadeFilesystemResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UnmountCascadeFilesystemResponse"
       },
       {
         "kind": "message",
@@ -20311,46 +19021,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.SetBaseExperimentsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetBaseExperimentsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SetBaseExperimentsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SetBaseExperimentsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetActiveAppDeploymentForWorkspaceRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetActiveAppDeploymentForWorkspaceRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetActiveAppDeploymentForWorkspaceResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetActiveAppDeploymentForWorkspaceResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetWindsurfJSAppDeploymentRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetWindsurfJSAppDeploymentRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetWindsurfJSAppDeploymentResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetWindsurfJSAppDeploymentResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeMemoriesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeMemoriesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCascadeMemoriesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCascadeMemoriesResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.GetModelStatusesRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetModelStatusesRequest"
       },
@@ -20358,36 +19028,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.GetModelStatusesResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetModelStatusesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.DeleteCascadeMemoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DeleteCascadeMemoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.DeleteCascadeMemoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DeleteCascadeMemoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateCascadeMemoryRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateCascadeMemoryRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateCascadeMemoryResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateCascadeMemoryResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserMemoriesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserMemoriesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetUserMemoriesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetUserMemoriesResponse"
       },
       {
         "kind": "message",
@@ -20401,148 +19041,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.GetConversationTagsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetConversationTagsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetConversationTagsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetConversationTagsResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.ConversationTagList",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_ConversationTagList"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateConversationTagsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateConversationTagsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateConversationTagsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateConversationTagsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RefreshMcpServersRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RefreshMcpServersRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RefreshMcpServersResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RefreshMcpServersResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMcpServerStatesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMcpServerStatesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMcpServerStatesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMcpServerStatesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SaveMcpServerToConfigFileRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SaveMcpServerToConfigFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SaveMcpServerToConfigFileResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SaveMcpServerToConfigFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateMcpServerInConfigFileRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateMcpServerInConfigFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateMcpServerInConfigFileResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateMcpServerInConfigFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ToggleMcpToolRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ToggleMcpToolRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ToggleMcpToolResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ToggleMcpToolResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMcpPromptRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMcpPromptRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.McpPromptMessageContent",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_McpPromptMessageContent"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.McpPromptMessage",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_McpPromptMessage"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetMcpPromptResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetMcpPromptResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllWorkflowsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllWorkflowsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllWorkflowsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllWorkflowsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CopyBuiltinWorkflowToWorkspaceRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CopyBuiltinWorkflowToWorkspaceRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CopyBuiltinWorkflowToWorkspaceResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CopyBuiltinWorkflowToWorkspaceResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllRulesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllRulesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllRulesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllRulesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllSkillsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllSkillsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllSkillsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllSkillsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllPlansRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllPlansRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllPlansResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllPlansResponse"
       },
       {
         "kind": "message",
@@ -20551,53 +19051,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.UpdateEnterpriseExperimentsFromUrlRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateEnterpriseExperimentsFromUrlRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateEnterpriseExperimentsFromUrlResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateEnterpriseExperimentsFromUrlResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ImportFromCursorRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ImportFromCursorRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ImportFromCursorResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ImportFromCursorResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CreateCustomizationFileRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CreateCustomizationFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CreateCustomizationFileResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CreateCustomizationFileResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.SendActionToChatPanelRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_SendActionToChatPanelRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SendActionToChatPanelResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SendActionToChatPanelResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordUserGrepRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordUserGrepRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.RecordUserGrepResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_RecordUserGrepResponse"
       },
       {
         "kind": "message",
@@ -20618,36 +19073,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.ShouldEnableUnleashResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_ShouldEnableUnleashResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetPatchAndCodeChangeRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetPatchAndCodeChangeRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetPatchAndCodeChangeResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetPatchAndCodeChangeResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CreateTrajectoryShareRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CreateTrajectoryShareRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CreateTrajectoryShareResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CreateTrajectoryShareResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAvailableCascadePluginsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAvailableCascadePluginsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAvailableCascadePluginsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAvailableCascadePluginsResponse"
       },
       {
         "kind": "message",
@@ -20681,138 +19106,8 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.StatUriRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StatUriRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.StatUriResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_StatUriResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.LogCascadeSessionRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_LogCascadeSessionRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.LogCascadeSessionResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_LogCascadeSessionResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SyncExploreAgentRunRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SyncExploreAgentRunRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SyncExploreAgentRunResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SyncExploreAgentRunResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.UserInputWithMetadata",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_UserInputWithMetadata"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeMapsForReposRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeMapsForReposRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeMapsForFileRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeMapsForFileRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeMapsForReposResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeMapsForReposResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeMapsForFileResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeMapsForFileResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ShareCodeMapRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ShareCodeMapRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ShareCodeMapResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ShareCodeMapResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetSharedCodeMapRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetSharedCodeMapRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetSharedCodeMapResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetSharedCodeMapResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeMapSuggestionsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeMapSuggestionsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetCodeMapSuggestionsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetCodeMapSuggestionsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateCodeMapMetadataRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateCodeMapMetadataRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.UpdateCodeMapMetadataResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_UpdateCodeMapMetadataResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SaveCodeMapFromJsonRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SaveCodeMapFromJsonRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SaveCodeMapFromJsonResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SaveCodeMapFromJsonResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.FormatCodeMapForAgentRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_FormatCodeMapForAgentRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.FormatCodeMapForAgentResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_FormatCodeMapForAgentResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CheckBugsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CheckBugsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.CheckBugsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CheckBugsResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetLifeguardConfigRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetLifeguardConfigRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetLifeguardConfigResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetLifeguardConfigResponse"
       },
       {
         "kind": "message",
@@ -20831,56 +19126,6 @@
       },
       {
         "kind": "message",
-        "original": "exa.language_server_pb.SpawnArenaModeMidConversationRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SpawnArenaModeMidConversationRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.SpawnArenaModeMidConversationResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_SpawnArenaModeMidConversationResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ConvergeArenaCascadesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ConvergeArenaCascadesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.ConvergeArenaCascadesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ConvergeArenaCascadesResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.DismissCodeMapSuggestionRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DismissCodeMapSuggestionRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.DismissCodeMapSuggestionResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_DismissCodeMapSuggestionResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.OnEditRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_OnEditRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.OnEditResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_OnEditResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetSystemPromptAndToolsRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetSystemPromptAndToolsRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetSystemPromptAndToolsResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetSystemPromptAndToolsResponse"
-      },
-      {
-        "kind": "message",
         "original": "exa.language_server_pb.SubmitBugReportRequest",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_SubmitBugReportRequest"
       },
@@ -20888,16 +19133,6 @@
         "kind": "message",
         "original": "exa.language_server_pb.SubmitBugReportResponse",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_SubmitBugReportResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllAcpRegistriesRequest",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllAcpRegistriesRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.language_server_pb.GetAllAcpRegistriesResponse",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_GetAllAcpRegistriesResponse"
       },
       {
         "kind": "enum",
@@ -21086,61 +19321,6 @@
       },
       {
         "kind": "enum",
-        "original": "exa.language_server_pb.ResolveWorktreeChangesMode",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveWorktreeChangesMode"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.ResolveWorktreeChangesMode.RESOLVE_WORKTREE_CHANGES_MODE_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveWorktreeChangesMode.ExaLanguageServerPb_ResolveWorktreeChangesMode_RESOLVE_WORKTREE_CHANGES_MODE_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.ResolveWorktreeChangesMode.RESOLVE_WORKTREE_CHANGES_MODE_MERGE",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveWorktreeChangesMode.ExaLanguageServerPb_ResolveWorktreeChangesMode_RESOLVE_WORKTREE_CHANGES_MODE_MERGE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.ResolveWorktreeChangesMode.RESOLVE_WORKTREE_CHANGES_MODE_STASH",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_ResolveWorktreeChangesMode.ExaLanguageServerPb_ResolveWorktreeChangesMode_RESOLVE_WORKTREE_CHANGES_MODE_STASH"
-      },
-      {
-        "kind": "enum",
-        "original": "exa.language_server_pb.CustomizationFileType",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.CustomizationFileType.CUSTOMIZATION_FILE_TYPE_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType.ExaLanguageServerPb_CustomizationFileType_CUSTOMIZATION_FILE_TYPE_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.CustomizationFileType.CUSTOMIZATION_FILE_TYPE_RULES",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType.ExaLanguageServerPb_CustomizationFileType_CUSTOMIZATION_FILE_TYPE_RULES"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.CustomizationFileType.CUSTOMIZATION_FILE_TYPE_WORKFLOWS",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType.ExaLanguageServerPb_CustomizationFileType_CUSTOMIZATION_FILE_TYPE_WORKFLOWS"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.CustomizationFileType.CUSTOMIZATION_FILE_TYPE_GLOBAL_WORKFLOWS",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType.ExaLanguageServerPb_CustomizationFileType_CUSTOMIZATION_FILE_TYPE_GLOBAL_WORKFLOWS"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.CustomizationFileType.CUSTOMIZATION_FILE_TYPE_SKILLS",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType.ExaLanguageServerPb_CustomizationFileType_CUSTOMIZATION_FILE_TYPE_SKILLS"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.CustomizationFileType.CUSTOMIZATION_FILE_TYPE_GLOBAL_SKILLS",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_CustomizationFileType.ExaLanguageServerPb_CustomizationFileType_CUSTOMIZATION_FILE_TYPE_GLOBAL_SKILLS"
-      },
-      {
-        "kind": "enum",
         "original": "exa.language_server_pb.FileType",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_FileType"
       },
@@ -21163,76 +19343,6 @@
         "kind": "enum_value",
         "original": "exa.language_server_pb.FileType.FILE_TYPE_SYMLINK",
         "flattened": "exa.api_server_pb.ExaLanguageServerPb_FileType.ExaLanguageServerPb_FileType_FILE_TYPE_SYMLINK"
-      },
-      {
-        "kind": "enum",
-        "original": "exa.language_server_pb.EditSource",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_UNSPECIFIED",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_UNSPECIFIED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_TYPED",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_TYPED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_PASTED",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_PASTED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_UNDO",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_UNDO"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_REDO",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_REDO"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_CUT",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_CUT"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_DRAG_DROP",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_DRAG_DROP"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_TAB",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_TAB"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_REFACTORING",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_REFACTORING"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_FORMATTING",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_FORMATTING"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_CASCADE_GENERATED",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_CASCADE_GENERATED"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_DISK_CHANGE",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_DISK_CHANGE"
-      },
-      {
-        "kind": "enum_value",
-        "original": "exa.language_server_pb.EditSource.EDIT_SOURCE_USER_OTHER",
-        "flattened": "exa.api_server_pb.ExaLanguageServerPb_EditSource.ExaLanguageServerPb_EditSource_EDIT_SOURCE_USER_OTHER"
       },
       {
         "kind": "service",
@@ -22086,6 +20196,26 @@
       },
       {
         "kind": "message",
+        "original": "exa.seat_management_pb.EnablePartnerProviderRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_EnablePartnerProviderRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.EnablePartnerProviderResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_EnablePartnerProviderResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DisablePartnerProviderRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DisablePartnerProviderRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DisablePartnerProviderResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DisablePartnerProviderResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.seat_management_pb.GetCurrentUserRequest",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetCurrentUserRequest"
       },
@@ -22881,6 +21011,16 @@
       },
       {
         "kind": "message",
+        "original": "exa.seat_management_pb.SetTeamDefaultGroupRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_SetTeamDefaultGroupRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.SetTeamDefaultGroupResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_SetTeamDefaultGroupResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.seat_management_pb.GetSelfHostedAcuGroupLimitRequest",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetSelfHostedAcuGroupLimitRequest"
       },
@@ -22983,36 +21123,6 @@
         "kind": "message",
         "original": "exa.seat_management_pb.GetGitHubAccessTokenResponse",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetGitHubAccessTokenResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.seat_management_pb.ConnectNetlifyAccountRequest",
-        "flattened": "exa.api_server_pb.ExaSeatManagementPb_ConnectNetlifyAccountRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.seat_management_pb.ConnectNetlifyAccountResponse",
-        "flattened": "exa.api_server_pb.ExaSeatManagementPb_ConnectNetlifyAccountResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.seat_management_pb.DisconnectNetlifyAccountRequest",
-        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DisconnectNetlifyAccountRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.seat_management_pb.DisconnectNetlifyAccountResponse",
-        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DisconnectNetlifyAccountResponse"
-      },
-      {
-        "kind": "message",
-        "original": "exa.seat_management_pb.GetNetlifyAccountStatusRequest",
-        "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetNetlifyAccountStatusRequest"
-      },
-      {
-        "kind": "message",
-        "original": "exa.seat_management_pb.GetNetlifyAccountStatusResponse",
-        "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetNetlifyAccountStatusResponse"
       },
       {
         "kind": "message",
@@ -23236,6 +21346,11 @@
       },
       {
         "kind": "message",
+        "original": "exa.seat_management_pb.OtelExportConfigList",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_OtelExportConfigList"
+      },
+      {
+        "kind": "message",
         "original": "exa.seat_management_pb.OrgStringList",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_OrgStringList"
       },
@@ -23301,6 +21416,26 @@
       },
       {
         "kind": "message",
+        "original": "exa.seat_management_pb.GetTierConfigRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetTierConfigRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.GetTierConfigResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetTierConfigResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.SetTierConfigRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_SetTierConfigRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.SetTierConfigResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_SetTierConfigResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.seat_management_pb.UsageConfigRequest",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_UsageConfigRequest"
       },
@@ -23341,6 +21476,46 @@
       },
       {
         "kind": "message",
+        "original": "exa.seat_management_pb.LookupUserInternalRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_LookupUserInternalRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.LookupUserInternalResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_LookupUserInternalResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.GenerateEnterpriseLicenseInternalRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_GenerateEnterpriseLicenseInternalRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.GenerateEnterpriseLicenseInternalResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_GenerateEnterpriseLicenseInternalResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DecodeEnterpriseLicenseInternalRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DecodeEnterpriseLicenseInternalRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DecodeEnterpriseLicenseInternalResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DecodeEnterpriseLicenseInternalResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.UpdateSubscriptionInternalRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_UpdateSubscriptionInternalRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.UpdateSubscriptionInternalResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_UpdateSubscriptionInternalResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.seat_management_pb.GetTeamInfoResponse",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetTeamInfoResponse"
       },
@@ -23373,6 +21548,16 @@
         "kind": "message",
         "original": "exa.seat_management_pb.CreateMultiTenantTeamResponse",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_CreateMultiTenantTeamResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.UpdateMultiTenantTeamSalesforceIdRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_UpdateMultiTenantTeamSalesforceIdRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.UpdateMultiTenantTeamSalesforceIdResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_UpdateMultiTenantTeamSalesforceIdResponse"
       },
       {
         "kind": "message",
@@ -23866,6 +22051,16 @@
       },
       {
         "kind": "message",
+        "original": "exa.seat_management_pb.SetSelfHostedAcuSharedLimitRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_SetSelfHostedAcuSharedLimitRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.SetSelfHostedAcuSharedLimitResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_SetSelfHostedAcuSharedLimitResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.seat_management_pb.DisableSelfHostedAcuBillingRequest",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_DisableSelfHostedAcuBillingRequest"
       },
@@ -24053,6 +22248,51 @@
         "kind": "message",
         "original": "exa.seat_management_pb.GetAirgapDownloadEligibilityResponse",
         "flattened": "exa.api_server_pb.ExaSeatManagementPb_GetAirgapDownloadEligibilityResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.ListManagedUsageExportsRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_ListManagedUsageExportsRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.ManagedUsageExportMetadata",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_ManagedUsageExportMetadata"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.ListManagedUsageExportsResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_ListManagedUsageExportsResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DownloadManagedUsageExportRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DownloadManagedUsageExportRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DownloadManagedUsageExportResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DownloadManagedUsageExportResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.UploadManagedUsageExportRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_UploadManagedUsageExportRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.UploadManagedUsageExportResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_UploadManagedUsageExportResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DeleteManagedUsageExportRequest",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DeleteManagedUsageExportRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.seat_management_pb.DeleteManagedUsageExportResponse",
+        "flattened": "exa.api_server_pb.ExaSeatManagementPb_DeleteManagedUsageExportResponse"
       },
       {
         "kind": "enum",
@@ -24961,6 +23201,11 @@
       },
       {
         "kind": "message",
+        "original": "exa.trust_pb.GeoBlockedRequestSignal",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GeoBlockedRequestSignal"
+      },
+      {
+        "kind": "message",
         "original": "exa.trust_pb.ProvidersExhaustedSignal",
         "flattened": "exa.api_server_pb.ExaTrustPb_ProvidersExhaustedSignal"
       },
@@ -25001,6 +23246,16 @@
       },
       {
         "kind": "message",
+        "original": "exa.trust_pb.LowCacheHitRateSignal",
+        "flattened": "exa.api_server_pb.ExaTrustPb_LowCacheHitRateSignal"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.ClientPromptMismatchSignal",
+        "flattened": "exa.api_server_pb.ExaTrustPb_ClientPromptMismatchSignal"
+      },
+      {
+        "kind": "message",
         "original": "exa.trust_pb.CyberAbuseEvent",
         "flattened": "exa.api_server_pb.ExaTrustPb_CyberAbuseEvent"
       },
@@ -25036,6 +23291,101 @@
       },
       {
         "kind": "message",
+        "original": "exa.trust_pb.GithubAgeSignal",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GithubAgeSignal"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditSeatFarmOrgEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditSeatFarmOrgEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditSharedCardEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditSharedCardEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditIpClusterEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditIpClusterEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditFarmDomainEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditFarmDomainEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditHighUsageEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditHighUsageEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditYoungAccountEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditYoungAccountEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditFlatHourlyProfileEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditFlatHourlyProfileEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditSuddenSpikeEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditSuddenSpikeEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditOneShotCascadesEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditOneShotCascadesEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditTrustLinkedAccountsEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditTrustLinkedAccountsEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditTrustCyberAbuseEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditTrustCyberAbuseEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditClientPromptMismatchEvidence",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditClientPromptMismatchEvidence"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditObservation",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservation"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditSignal",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditSignal"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditEventItem",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditEventItem"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.AbuseAuditEventResult",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditEventResult"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.RecordAbuseAuditEventsRequest",
+        "flattened": "exa.api_server_pb.ExaTrustPb_RecordAbuseAuditEventsRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.RecordAbuseAuditEventsResponse",
+        "flattened": "exa.api_server_pb.ExaTrustPb_RecordAbuseAuditEventsResponse"
+      },
+      {
+        "kind": "message",
         "original": "exa.trust_pb.RecordTrustEventsRequest",
         "flattened": "exa.api_server_pb.ExaTrustPb_RecordTrustEventsRequest"
       },
@@ -25043,6 +23393,26 @@
         "kind": "message",
         "original": "exa.trust_pb.RecordTrustEventsResponse",
         "flattened": "exa.api_server_pb.ExaTrustPb_RecordTrustEventsResponse"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.GetTrustAssessmentRequest",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GetTrustAssessmentRequest"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.TrustSignalContribution",
+        "flattened": "exa.api_server_pb.ExaTrustPb_TrustSignalContribution"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.TrustEventRecord",
+        "flattened": "exa.api_server_pb.ExaTrustPb_TrustEventRecord"
+      },
+      {
+        "kind": "message",
+        "original": "exa.trust_pb.GetTrustAssessmentResponse",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GetTrustAssessmentResponse"
       },
       {
         "kind": "enum",
@@ -25148,6 +23518,206 @@
         "kind": "enum_value",
         "original": "exa.trust_pb.ManualTrustVerdict.MANUAL_TRUST_VERDICT_DISTRUST",
         "flattened": "exa.api_server_pb.ExaTrustPb_ManualTrustVerdict.ExaTrustPb_ManualTrustVerdict_MANUAL_TRUST_VERDICT_DISTRUST"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.trust_pb.GithubAgeEventKind",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GithubAgeEventKind"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.GithubAgeEventKind.GITHUB_AGE_EVENT_KIND_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GithubAgeEventKind.ExaTrustPb_GithubAgeEventKind_GITHUB_AGE_EVENT_KIND_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.GithubAgeEventKind.GITHUB_AGE_EVENT_KIND_ADD",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GithubAgeEventKind.ExaTrustPb_GithubAgeEventKind_GITHUB_AGE_EVENT_KIND_ADD"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.GithubAgeEventKind.GITHUB_AGE_EVENT_KIND_BACKFILL",
+        "flattened": "exa.api_server_pb.ExaTrustPb_GithubAgeEventKind.ExaTrustPb_GithubAgeEventKind_GITHUB_AGE_EVENT_KIND_BACKFILL"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.trust_pb.AbuseAuditObservationType",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_SEAT_FARM_ORG",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_SEAT_FARM_ORG"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_SHARED_CARD",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_SHARED_CARD"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_IP_CLUSTER",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_IP_CLUSTER"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_FARM_DOMAIN",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_FARM_DOMAIN"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_HIGH_USAGE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_HIGH_USAGE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_YOUNG_ACCOUNT",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_YOUNG_ACCOUNT"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_FLAT_HOURLY_PROFILE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_FLAT_HOURLY_PROFILE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_SUDDEN_SPIKE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_SUDDEN_SPIKE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_ONE_SHOT_CASCADES",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_ONE_SHOT_CASCADES"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_TRUST_LINKED_ACCOUNTS",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_TRUST_LINKED_ACCOUNTS"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_TRUST_CYBER_ABUSE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_TRUST_CYBER_ABUSE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditObservationType.ABUSE_AUDIT_OBSERVATION_TYPE_CLIENT_PROMPT_MISMATCH",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditObservationType.ExaTrustPb_AbuseAuditObservationType_ABUSE_AUDIT_OBSERVATION_TYPE_CLIENT_PROMPT_MISMATCH"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.trust_pb.AbuseAuditVerdict",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditVerdict"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditVerdict.ABUSE_AUDIT_VERDICT_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditVerdict.ExaTrustPb_AbuseAuditVerdict_ABUSE_AUDIT_VERDICT_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditVerdict.ABUSE_AUDIT_VERDICT_LIKELY_ABUSE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditVerdict.ExaTrustPb_AbuseAuditVerdict_ABUSE_AUDIT_VERDICT_LIKELY_ABUSE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditVerdict.ABUSE_AUDIT_VERDICT_UNCLEAR",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditVerdict.ExaTrustPb_AbuseAuditVerdict_ABUSE_AUDIT_VERDICT_UNCLEAR"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditVerdict.ABUSE_AUDIT_VERDICT_LIKELY_LEGIT",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditVerdict.ExaTrustPb_AbuseAuditVerdict_ABUSE_AUDIT_VERDICT_LIKELY_LEGIT"
+      },
+      {
+        "kind": "enum",
+        "original": "exa.trust_pb.AbuseAuditRejectReason",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_UNSPECIFIED",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_UNSPECIFIED"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_MISSING_QUERY_KEY",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_MISSING_QUERY_KEY"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_MISSING_IDEMPOTENCY_KEY",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_MISSING_IDEMPOTENCY_KEY"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_INVALID_OBSERVED_AT",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_INVALID_OBSERVED_AT"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_MISSING_PAYLOAD",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_MISSING_PAYLOAD"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_INVALID_DETECTOR_VERSION",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_INVALID_DETECTOR_VERSION"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_SHARE_OUT_OF_RANGE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_SHARE_OUT_OF_RANGE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_NEGATIVE_COUNT",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_NEGATIVE_COUNT"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_INVALID_ID",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_INVALID_ID"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_OTHER",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_OTHER"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_ACTIVE_HOURS_OUT_OF_RANGE",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_ACTIVE_HOURS_OUT_OF_RANGE"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_NO_OBSERVATIONS",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_NO_OBSERVATIONS"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_EMPTY_OBSERVATION",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_EMPTY_OBSERVATION"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_DUPLICATE_OBSERVATION",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_DUPLICATE_OBSERVATION"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_INVALID_WINDOW_HOURS",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_INVALID_WINDOW_HOURS"
+      },
+      {
+        "kind": "enum_value",
+        "original": "exa.trust_pb.AbuseAuditRejectReason.ABUSE_AUDIT_REJECT_REASON_INVALID_VERDICT",
+        "flattened": "exa.api_server_pb.ExaTrustPb_AbuseAuditRejectReason.ExaTrustPb_AbuseAuditRejectReason_ABUSE_AUDIT_REJECT_REASON_INVALID_VERDICT"
       },
       {
         "kind": "message",
@@ -26346,46 +24916,6 @@
       },
       {
         "kind": "message",
-        "original": "grpc.binarylog.v1.GrpcLogEntry",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_GrpcLogEntry"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.ClientHeader",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_ClientHeader"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.ServerHeader",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_ServerHeader"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.Trailer",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_Trailer"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.Message",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_Message"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.Metadata",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_Metadata"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.MetadataEntry",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_MetadataEntry"
-      },
-      {
-        "kind": "message",
-        "original": "grpc.binarylog.v1.Address",
-        "flattened": "exa.api_server_pb.GrpcBinarylogV1_Address"
-      },
-      {
-        "kind": "message",
         "original": "io.prometheus.client.LabelPair",
         "flattened": "exa.api_server_pb.IoPrometheusClient_LabelPair"
       },
@@ -26687,11 +25217,12 @@
         "exa/context_module_pb/context_module.proto",
         "exa/cortex_pb/cortex.proto",
         "exa/prompt_pb/prompt.proto",
+        "exa/seat_management_pb/seat_management.proto",
         "exa/trust_pb/trust.proto",
         "google/protobuf/timestamp.proto"
       ],
-      "messages": 384,
-      "enums": 8,
+      "messages": 382,
+      "enums": 11,
       "services": 1,
       "extensions": 0,
       "source_info_locations": 0,
@@ -26729,20 +25260,6 @@
       "locations_with_comments": 0
     },
     {
-      "name": "exa/browser_preview_pb/browser_preview.proto",
-      "package": "exa.browser_preview_pb",
-      "syntax": "proto3",
-      "dependencies": [
-        "exa/codeium_common_pb/browser_context.proto"
-      ],
-      "messages": 4,
-      "enums": 0,
-      "services": 1,
-      "extensions": 0,
-      "source_info_locations": 0,
-      "locations_with_comments": 0
-    },
-    {
       "name": "exa/bug_checker_pb/bug_checker.proto",
       "package": "exa.bug_checker_pb",
       "syntax": "proto3",
@@ -26775,7 +25292,7 @@
       "dependencies": [
         "exa/codeium_common_pb/codeium_common.proto"
       ],
-      "messages": 9,
+      "messages": 8,
       "enums": 0,
       "services": 1,
       "extensions": 0,
@@ -26836,8 +25353,8 @@
         "google/protobuf/duration.proto",
         "google/protobuf/timestamp.proto"
       ],
-      "messages": 232,
-      "enums": 99,
+      "messages": 222,
+      "enums": 101,
       "services": 0,
       "extensions": 0,
       "source_info_locations": 0,
@@ -26875,8 +25392,8 @@
         "google/protobuf/empty.proto",
         "google/protobuf/timestamp.proto"
       ],
-      "messages": 311,
-      "enums": 46,
+      "messages": 301,
+      "enums": 45,
       "services": 0,
       "extensions": 0,
       "source_info_locations": 0,
@@ -26937,12 +25454,10 @@
       "syntax": "proto3",
       "dependencies": [
         "buf/validate/validate.proto",
-        "exa/codeium_common_pb/codeium_common.proto",
-        "exa/cortex_pb/cortex.proto",
-        "exa/language_server_pb/language_server.proto"
+        "exa/codeium_common_pb/codeium_common.proto"
       ],
-      "messages": 94,
-      "enums": 3,
+      "messages": 29,
+      "enums": 2,
       "services": 1,
       "extensions": 0,
       "source_info_locations": 0,
@@ -27004,22 +25519,18 @@
       "syntax": "proto3",
       "dependencies": [
         "buf/validate/validate.proto",
-        "exa/auto_cascade_common_pb/auto_cascade_common.proto",
-        "exa/bug_checker_pb/bug_checker.proto",
         "exa/cascade_plugins_pb/cascade_plugins.proto",
         "exa/chat_pb/chat.proto",
-        "exa/code_edit/code_edit_pb/code_edit.proto",
         "exa/codeium_common_pb/codeium_common.proto",
         "exa/cortex_pb/cortex.proto",
         "exa/diff_action_pb/diff_action.proto",
         "exa/index_pb/index.proto",
         "exa/knowledge_base_pb/knowledge_base.proto",
-        "exa/reactive_component_pb/reactive_component.proto",
         "google/protobuf/duration.proto",
         "google/protobuf/timestamp.proto"
       ],
-      "messages": 380,
-      "enums": 11,
+      "messages": 123,
+      "enums": 8,
       "services": 1,
       "extensions": 0,
       "source_info_locations": 0,
@@ -27110,7 +25621,7 @@
         "exa/codeium_common_pb/codeium_common.proto",
         "google/protobuf/timestamp.proto"
       ],
-      "messages": 402,
+      "messages": 428,
       "enums": 9,
       "services": 1,
       "extensions": 0,
@@ -27163,8 +25674,8 @@
       "dependencies": [
         "google/protobuf/timestamp.proto"
       ],
-      "messages": 21,
-      "enums": 4,
+      "messages": 47,
+      "enums": 8,
       "services": 0,
       "extensions": 0,
       "source_info_locations": 0,
@@ -27375,21 +25886,6 @@
         "google/protobuf/any.proto"
       ],
       "messages": 1,
-      "enums": 0,
-      "services": 0,
-      "extensions": 0,
-      "source_info_locations": 0,
-      "locations_with_comments": 0
-    },
-    {
-      "name": "grpc/binlog/v1/binarylog.proto",
-      "package": "grpc.binarylog.v1",
-      "syntax": "proto3",
-      "dependencies": [
-        "google/protobuf/duration.proto",
-        "google/protobuf/timestamp.proto"
-      ],
-      "messages": 8,
       "enums": 0,
       "services": 0,
       "extensions": 0,
