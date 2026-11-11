@@ -9,6 +9,7 @@ package main
 import (
 	"bytes"
 	"compress/gzip"
+	"context"
 	"crypto/sha256"
 	"encoding/binary"
 	"flag"
@@ -22,6 +23,7 @@ import (
 
 	devinproto "local/devinproto"
 
+	"connectrpc.com/connect"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )
@@ -29,7 +31,7 @@ import (
 var requestCount atomic.Int64
 
 // main 起上游桩服务：GetChatMessage 按 -scenario 产出预设帧形态，
-// 其余 RPC 一律断开连接。
+// 可选模拟模型目录，其余 RPC 一律断开连接。
 func main() {
 	listen := flag.String("listen", "127.0.0.1:48090", "监听地址")
 	scenario := flag.String("scenario", "precontent",
@@ -42,6 +44,7 @@ func main() {
 	ttfb := flag.Duration("ttfb", 0, "stream 场景首帧前延迟（模拟上游思考 TTFT）")
 	cacheMode := flag.String("cache-mode", "none",
 		"none|content|trajectory：模拟上游前缀缓存记账并在 usage 帧回 cache_read——content 跨轨迹内容匹配，trajectory 只匹配同 trajectory_id 的既往请求；匹配按 EPHEMERAL 断点边界计")
+	catalogModel := flag.String("catalog-model", "", "可选：给离线客户端测试模拟模型目录；默认不启用")
 	flag.Parse()
 	// 未知 scenario 拼错不能静默落到某个场景——那会让测试对着错误
 	// 行为判结果。启动期直接拒绝。
@@ -57,6 +60,18 @@ func main() {
 	cache := &prefixCache{mode: *cacheMode}
 	if *cacheMode != "none" && *cacheMode != "content" && *cacheMode != "trajectory" {
 		log.Fatalf("unknown cache-mode %q", *cacheMode)
+	}
+	if *catalogModel != "" {
+		http.Handle("/exa.api_server_pb.ApiServerService/GetCliModelConfigs", connect.NewUnaryHandler(
+			"/exa.api_server_pb.ApiServerService/GetCliModelConfigs",
+			func(_ context.Context, _ *connect.Request[devinproto.GetCliModelConfigsRequest]) (*connect.Response[devinproto.GetCliModelConfigsResponse], error) {
+				return connect.NewResponse(&devinproto.GetCliModelConfigsResponse{
+					ClientModelConfigs: []*devinproto.ExaCodeiumCommonPb_ClientModelConfig{{
+						Label: proto.String(*catalogModel), ModelUid: proto.String(*catalogModel),
+					}},
+				}), nil
+			},
+		))
 	}
 
 	http.HandleFunc("/exa.api_server_pb.ApiServerService/GetChatMessage", func(w http.ResponseWriter, r *http.Request) {
@@ -195,7 +210,7 @@ func main() {
 		_, _ = w.Write(body)
 		log.Printf("done #%d bytes=%d", n, len(body))
 	})
-	// 其余 RPC（GetCliModelConfigs 等）不实现：直接断开让调用方走目录缺失路径。
+	// 未显式启用模型目录时，以及其他未模拟的 RPC，一律断开连接。
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		hj, ok := w.(http.Hijacker)
 		if !ok {
